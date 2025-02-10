@@ -14,11 +14,29 @@ date: '2022-08-18'
   ```
 **MacOS**
 
-  MacOS系统需安装Xcode, 如果未安装，请前往Apple官网下载最新的[Xcode](https://apps.apple.com/gb/app/xcode/id497799835?mt=12) ,根据提示完成安装。
+  1. Xcode
+
+     请前往Apple官网下载最新的[Xcode](https://apps.apple.com/gb/app/xcode/id497799835?mt=12) ,根据提示完成安装。
+
+  2. Clang14+
+
+     Xcode自带Clang，请使用`clang --version`检查Clang版本，确保clang版本不低于14
 
 **Windows**
 
-  Windows系统需安装Visual C++ Build Tool，可以先不安装，安装Rust时，根据提示安装即可。
+  1. Git
+
+     前往 https://git-scm.com/ 下载安装。
+
+  2. Clang14+
+  
+     前往 https://github.com/llvm/llvm-project/releases/tag/llvmorg-18.1.8 下载
+
+     如果下载的是手动安装版本，需要手动设置`LIBCLANG_PATH`环境变量指向llvm的`bin`目录。
+
+  3. Visual C++ Build Tool 
+
+     可以先不安装，安装Rust时，选择安装`Visual Studio Community`即可。
 
 ## 安装Rust
 
@@ -32,7 +50,7 @@ date: '2022-08-18'
 
 **Windows**
 
-  下载[rustup-init.exe](https://static.rust-lang.org/rustup/dist/i686-pc-windows-gnu/rustup-init.exe) ,根据提示安装即可。Target需选择msvc(这通常是默认选项)
+  下载[rustup-init.exe](https://static.rust-lang.org/rustup/dist/i686-pc-windows-gnu/rustup-init.exe) , 根据提示安装即可，如果系统还没有安装Visual Studio，安装向导里需要选择安装`Visual Studio Community`。
 
 ## 安装NodeJS
 
