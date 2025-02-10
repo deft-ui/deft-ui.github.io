@@ -5,7 +5,7 @@ import starlight from '@astrojs/starlight';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://deft-ui.github.io',
-	base: 'deft-docs',
+	// base: 'deft-docs',
 	integrations: [
 		starlight({
 			title: 'Deft 文档',
