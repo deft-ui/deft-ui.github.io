@@ -1,0 +1,34 @@
+---
+title: Deft示例
+description: Deft示例
+template: splash
+
+---
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+import { Image } from 'astro:assets';
+import retroSnake from "../../assets/demos/retro-snake.gif"
+import videoPlayer from "../../assets/demos/video-player.png"
+import tinySpice from "../../assets/demos/tiny-spice.png"
+import videoConverter from "../../assets/demos/video-converter.png"
+
+
+<CardGrid>
+    <Card title="视频格式转换器">
+        <Image src={videoConverter} alt="video converter" width="600"  />
+        <a href="https://github.com/kasonyang/video-converter">查看源码</a>
+    </Card>
+    <Card title="贪吃蛇游戏">
+        <Image src={retroSnake} alt="retro snake" width="600" />
+        <a href="https://github.com/kasonyang/retro-snaker">查看源码</a>
+    </Card>
+    <Card title="视频播放器">
+        <Image src={videoPlayer} alt="video player" width="600"  />
+        <a href="https://github.com/deft-ui/deft-video">查看源码</a>
+    </Card>
+    <Card title="SPICE远程桌面客户端">
+        <Image src={tinySpice} alt="SPICE client" width="600"  />
+        <a href="https://github.com/kasonyang/tiny-spice">查看源码</a>
+    </Card>
+</CardGrid>
+

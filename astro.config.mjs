@@ -8,7 +8,7 @@ export default defineConfig({
 	// base: 'deft-docs',
 	integrations: [
 		starlight({
-			title: 'Deft 文档',
+			title: 'Deft',
 			locales: {
 				root: {
 					label: '简体中文',
