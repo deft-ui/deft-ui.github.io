@@ -2,7 +2,7 @@
 title: 创建第一个工程
 ---
 
-## 创建
+## 创建工程
 
 安装Rust和NodeJS环境后，使用下面任意一条命令，即可创建一个Deft工程。
 
@@ -19,7 +19,7 @@ pnpm create deft@latest
 yarn create deft
 ```
 
-## 启动
+## 启动工程
 
 ```bash
 npm run dev

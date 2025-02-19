@@ -33,6 +33,10 @@ export default defineConfig({
 						{
 							label: "创建第一个工程",
 							slug: "guides/create-project",
+						},
+						{
+							label: "架构",
+							slug: "guides/architecture",
 						}
 					],
 				},
@@ -75,7 +79,10 @@ export default defineConfig({
 							label: '滚动容器 Scroll',
 							slug: 'components/scroll',
 						},
-
+						{
+							label: '视频 Video',
+							slug: 'components/video',
+						},
 					]
 				},
 				{
@@ -88,6 +95,14 @@ export default defineConfig({
 						{
 							label: '窗体 Window',
 							slug: 'api/window',
+						},
+						{
+							label: '网络请求 Fetch',
+							slug: 'api/fetch',
+						},
+						{
+							label: 'WebSocket',
+							slug: 'api/websocket',
 						},
 						{
 							label: '音频 Audio',
@@ -124,10 +139,6 @@ export default defineConfig({
 						{
 							label: '后台线程 Worker',
 							slug: 'api/worker',
-						},
-						{
-							label: 'WebSocket',
-							slug: 'api/websocket',
 						},
 						{
 							label: 'Sqlite',
