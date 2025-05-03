@@ -43,10 +43,10 @@ export default defineConfig({
 				{
 					label: '组件',
 					items: [
-						{
-							label: '安装',
-							slug: 'components/install'
-						},
+						// {
+						// 	label: '安装',
+						// 	slug: 'components/install'
+						// },
 						{
 							label: '基类 Element',
 							slug: 'components/element',
@@ -87,7 +87,29 @@ export default defineConfig({
 				},
 				{
 					label: '样式',
-					slug: 'guides/style',
+					items: [
+						{
+							label: '概述',
+							slug: 'styles/overview',
+						},
+						{
+							label: '属性',
+							slug: 'styles/properties',
+						},
+						{
+							label: '选择器',
+							slug: 'styles/selector',
+						},
+						{
+							label: '长度',
+							slug: 'styles/length',
+						},
+						{
+							label: '颜色',
+							slug: 'styles/color',
+						},
+
+					]
 				},
 				{
 					label: 'API',

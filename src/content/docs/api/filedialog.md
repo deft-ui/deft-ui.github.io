@@ -5,7 +5,7 @@ title:  FileDialog 文件对话框
 
 **使用**
 
-```
+```javascript
 const files = await fileDialog.show({
     dialogType: "multiple",
 });

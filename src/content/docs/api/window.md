@@ -7,7 +7,7 @@ PC平台支持创建多个窗体，Mobile平台仅支持创建一个窗体。
 
 **使用**
 
-```
+```javascript
 const window = new Window();
 // 设置标题
 window.title = "My Deft App";
@@ -15,7 +15,7 @@ window.title = "My Deft App";
 window.bindResize((e) => {
     console.log("window resized", e);
 });
-// 修改窗体大小
+// 修改窗体大小（仅PC平台生效）
 window.resize({
     width: 600,
     height: 400

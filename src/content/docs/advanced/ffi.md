@@ -5,9 +5,19 @@ title: 跨语言调用
 ## JavaScript调用Rust
 
 1. 声明Rust函数
+
+   同步函数
    ```rust
    #[deft_macros::js_func]
    pub fn hello(message: String) -> String {
+       println("value from js: ", message);
+       "Hi, I am Rust".to_string()
+   }
+   ```
+   异步函数
+   ```rust
+   #[deft_macros::js_func]
+   pub async fn hello_async(message: String) -> String {
        println("value from js: ", message);
        "Hi, I am Rust".to_string()
    }
@@ -17,13 +27,19 @@ title: 跨语言调用
    impl IApp for YourApp {
       fn init_js_engine(&mut self, js_engine: &mut JsEngine) {
          js_engine.add_global_func(hello::new());
+         js_engine.add_global_func(hello_async::new());
       }
       ...
    }   
    ```
 3. JavaScript调用
    ```javascript
+   // 调用同步函数
    const value = hello("Hello, I am JavaScript");
+   console.log('value from rust', value);
+   
+   // 调用异步函数
+   const value = await hello_async("Hello, I am JavaScript");
    console.log('value from rust', value);
    ```
 

@@ -8,7 +8,7 @@ Deft支持通过CSS定义动画。
 
 ## 定义动画
 
-与Web中的@keyframes不同，在Deft中，需要通过`animation_cteate`定义动画。
+与Web中的@keyframes不同，在Deft中，需要通过`animation_cteate`定义动画，当前仅支持`transform`属性。
 
 **示例**
 

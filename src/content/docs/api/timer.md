@@ -8,7 +8,7 @@ title: Timer 计时器
 
 **使用**
 
-```
+```javascript
 setTimeout(() => {
   console.log("timeout!!!");
 }, 1000);

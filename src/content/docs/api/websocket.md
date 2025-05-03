@@ -5,7 +5,7 @@ WebSocket用于创建持久长连接。
 
 **使用**
 
-```
+```javascript
 const ws = new WebSocket("wss://xxxx");
 ws.onopen = () => {
     console.log("connection opened");

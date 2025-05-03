@@ -5,7 +5,7 @@ Sqlite用于本地储存/查询结构化数据。
 
 **使用**
 
-```
+```javascript
 // 打开/创建数据库文件
 const conn = await Sqlite.open("/path/to/dbfile");
 // 创建数据表

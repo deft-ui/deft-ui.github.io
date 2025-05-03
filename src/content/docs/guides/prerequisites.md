@@ -8,9 +8,9 @@ date: '2022-08-18'
 
   这里仅以Debian12为例，其他Linux系统根据包管理工具的不同，安装命令和需要安装的包可能稍有不同。
   ```
-  sudo apt install build-essential libssl-dev libclang-dev libc++-dev
-  sudo apt install xorg-dev libxcb-xfixes0-dev libxcb-shape0-dev
-  sudo apt install libasound2-dev
+  sudo apt install build-essential libssl-dev libclang-dev libc++-dev \
+       xorg-dev libxcb-xfixes0-dev libxcb-shape0-dev libdbus-1-dev \
+       libasound2-dev libegl-dev libgles-dev librust-wayland-egl-dev
   ```
 **MacOS**
 
