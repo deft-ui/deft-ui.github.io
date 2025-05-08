@@ -108,7 +108,10 @@ export default defineConfig({
 							label: '颜色',
 							slug: 'styles/color',
 						},
-
+						{
+							label: '2D变换',
+							slug: 'styles/transform',
+						}
 					]
 				},
 				{
@@ -178,6 +181,10 @@ export default defineConfig({
 						{
 							label: 'Rust/JavaScript通信',
 							slug: 'advanced/ffi',
+						},
+						{
+							label: '渲染器',
+							slug: 'advanced/renderers',
 						},
 						{
 							label: '自定义组件',
