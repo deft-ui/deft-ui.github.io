@@ -35,6 +35,10 @@ export default defineConfig({
 							slug: "guides/create-project",
 						},
 						{
+							label: "可选特性",
+							slug: "guides/features",
+						},
+						{
 							label: "架构",
 							slug: "guides/architecture",
 						}
@@ -190,6 +194,15 @@ export default defineConfig({
 							label: '自定义组件',
 							slug: 'advanced/custom-component',
 						},
+					]
+				},
+				{
+					label: '鸿蒙',
+					items: [
+						{
+							label: '快速开始',
+							slug: 'harmony/quick-start'
+						}
 					]
 				}
 				// {
