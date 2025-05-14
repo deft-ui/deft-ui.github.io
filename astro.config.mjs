@@ -204,7 +204,16 @@ export default defineConfig({
 							slug: 'harmony/quick-start'
 						}
 					]
-				}
+				},
+				{
+					label: 'Android',
+					items: [
+						{
+							label: '快速开始',
+							slug: 'android/quick-start'
+						}
+					]
+				},
 				// {
 				// 	label: 'Reference',
 				// 	autogenerate: { directory: 'reference' },
