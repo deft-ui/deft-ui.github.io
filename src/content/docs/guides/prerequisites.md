@@ -29,12 +29,12 @@ date: '2022-08-18'
      前往 https://git-scm.com/ 下载安装。
 
   2. Clang14+
-  
+
      前往 https://github.com/llvm/llvm-project/releases/tag/llvmorg-18.1.8 下载
 
      如果下载的是手动安装版本，需要手动设置`LIBCLANG_PATH`环境变量指向llvm的`bin`目录。
 
-  3. Visual C++ Build Tool 
+  3. Visual C++ Build Tool
 
      可以先不安装，安装Rust时，选择安装`Visual Studio Community`即可。
 
@@ -62,8 +62,8 @@ date: '2022-08-18'
 * 其他平台
 
   前往[NodeJS官网](https://nodejs.org/)下载最新的Node安装包，根据提示安装即可。
-  
-  
+
+
 ## Android环境配置
 
 如果你的应用不需要适配Android系统，可以直接跳过这部分。
@@ -105,8 +105,8 @@ export CARGO_NDK_SYSROOT_LIBS_PATH=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/li
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 export ANDROID_NDK_HOME="$ANDROID_HOME/ndk/$(ls -1 $ANDROID_HOME/ndk)"
 export ANDROID_NDK=$ANDROID_NDK_HOME
-export PATH=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin:$PATH
-export CARGO_NDK_SYSROOT_LIBS_PATH=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/aarch64-linux-android/
+export PATH=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/darwin-x86_64/bin:$PATH
+export CARGO_NDK_SYSROOT_LIBS_PATH=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/
 ```
 
 **Windows**
