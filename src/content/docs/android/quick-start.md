@@ -139,4 +139,4 @@ Press q to quit
 ```bash
 npm run build:android
 ```
-构建完成后，使用`AndroidStudio`打开`android`目录，和普通Android应用一样打包即可。
+构建完成后，使用Android Studio打开`android`目录，和普通Android应用一样打包即可。
