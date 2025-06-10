@@ -6,7 +6,7 @@ title: 文字标签 Label
 
 **使用**
 
-```
+```javascript
 import {Label} from 'deft-react';
 function App() {
     return <Label text="Hello" />
@@ -17,6 +17,4 @@ function App() {
 
 | 属性       | 说明     | 类型                   | 默认值   |
 |----------|--------|----------------------|-------|
-| textWrap | 是否自动换行 | boolean              | false |
 | text     | 文本内容   | string               | -     |
-| align    | 对齐方式   | 枚举：left,right,center | left  |

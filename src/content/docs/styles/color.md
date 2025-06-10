@@ -4,7 +4,7 @@ title: 颜色
 
 `color`表述颜色值，支持以下语法：
 
-```
+```css
 
 /* <named-color> 值 */
 color: red;

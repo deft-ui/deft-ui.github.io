@@ -6,7 +6,7 @@ title: 图片 Image
 
 **使用**
 
-```
+```javascript
 import {Image} from 'deft-react';
 function App() {
     return <Image src="path/to/image.png" />
@@ -15,6 +15,6 @@ function App() {
 
 **属性**
 
-| 属性  | 说明                       | 类型     | 默认值 |
-|-----|--------------------------|--------|-----|
-| src | 图片地址，可以是本地文件路径，也可以使用内联图片 | string | -   |
+| 属性  | 说明                                 | 类型     | 默认值 |
+|-----|------------------------------------|--------|-----|
+| src | 图片地址，可以是本地文件路径，也可以使用内联图片(data url) | string | -   |

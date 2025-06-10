@@ -6,7 +6,7 @@ title: 容器 Container
 
 **使用**
 
-```
+```javascript
 import {Container} from 'deft-react';
 function App() {
     return <Container>

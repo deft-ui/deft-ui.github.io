@@ -52,6 +52,10 @@ export default defineConfig({
 						// 	slug: 'components/install'
 						// },
 						{
+							label: '组件速览',
+							slug: "components/gallery",
+						},
+						{
 							label: '基类 Element',
 							slug: 'components/element',
 						},
@@ -68,21 +72,37 @@ export default defineConfig({
 							slug: 'components/image',
 						},
 						{
-							label: '输入框 Entry',
-							slug: 'components/entry',
+							label: '单行输入框 TextInput',
+							slug: 'components/text-input',
 						},
 						{
-							label: '段落 Paragraph',
-							slug: 'components/paragraph',
+							label: '多行输入框 TextEdit',
+							slug: 'components/text-edit',
+						},
+						{
+							label: '单选按钮 Radio',
+							slug: 'components/radio',
+						},
+						{
+							label: '复选框 Checkbox',
+							slug: 'components/checkbox',
+						},
+						{
+							label: '下拉框 Select',
+							slug: 'components/select',
+						},
+						{
+							label: '富文本 RichText',
+							slug: 'components/rich-text',
 						},
 						{
 							label: '容器 Container',
 							slug: 'components/container',
 						},
-						{
-							label: '滚动容器 Scroll',
-							slug: 'components/scroll',
-						},
+						// {
+						// 	label: '滚动容器 Scroll',
+						// 	slug: 'components/scroll',
+						// },
 						{
 							label: '视频 Video',
 							slug: 'components/video',
