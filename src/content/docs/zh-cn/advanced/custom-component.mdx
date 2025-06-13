@@ -1,0 +1,141 @@
+---
+title: 自定义组件(Rust)
+---
+
+import { Image } from 'astro:assets';
+import initImg from "../../../../assets/hello-element/init.png";
+import renderImg from "../../../../assets/hello-element/render.png";
+
+
+Deft内置了一些常用的基础组件，同时允许你创建自定义组件，以满足一些复杂需求。
+
+_备注：这里的自定义组件指的是类似于Label,Button这些基础组件。如果你需要创建自定义React/Vue/Solid组件，应该参考对应框架的自定义组件教程，本教程不适用。_
+
+### 创建自定义组件
+
+要创建一个自定义组件非常简单，只需要实现`ElementBackend` trait即可。
+
+`ElementBackend`有几个方法，其中只有`create`方法是必须实现的，其他方法根据需求，选择性去实现。
+
+首先，我们需要创建一个结构体用于表示我们将要创建自定义组件，这里以`HelloBackend`为例。
+
+```rust
+pub struct HelloBackend {
+    element_weak: ElementWeak,
+}
+
+impl ElementBackend for HelloBackend {
+    fn create(element: &mut Element) -> Self where Self: Sized {
+        Self {
+            // 保存元素弱引用，后面会用到
+            element_weak: element.as_weak(),
+        }
+    }
+}
+```
+
+### 注册自定义组件
+
+创建完自定义组件后，需要注册一下，可以在初始化JS引擎的时候注册。
+
+```rust
+impl IApp for AppImpl {
+    
+    fn init_js_engine(&mut self, _js_engine: &mut JsEngine) {
+        // 注册我们的自定义组件，tag为hello
+        register_component::<HelloBackend>("hello");
+    }
+    ...
+}
+```
+
+这里我们把这个组件注册为`hello`组件。
+
+### 创建自定义组件的JS绑定
+
+为了能在JS中使用这个自定义组件，我们还需要为其创建一个JS绑定: `HelloElement`。
+
+```javascript
+class HelloElement extends Element {
+    constructor() {
+        /// hello为元素的tag,需和注册时声明的tag保持一致
+        super("hello");
+    }
+}
+```
+
+HelloElement继承于`Element`类，这是所有组件的基类。
+
+### 使用自定义组件
+
+经过`创建`,`注册`,`绑定`这3个步骤后，就可以在JS代码中直接使用啦。
+
+首先，我们为其定义一些基础样式。
+
+```css
+body {
+    justify-content: center;
+    align-items: center;
+}
+hello {
+    width: 100px;
+    height: 100px;
+    background: #ccc;
+}
+```
+
+然后，我们实例化一个hello组件，并添加到文档流中。
+
+```javascript
+const helloElement = new HelloElement();
+window.body.addChild(helloElement);
+```
+
+运行效果如下：
+
+<Image src={initImg} alt="hello element" width="300" />
+
+### 绘制组件
+
+可以看到，我们的自定义组件在窗口中显示出来了，但是这个组件一点用也没有，因为它什么也没有做。现在我们接着来完善这个组件，为其添加一些自定义绘制逻辑，这通常是自定义组件需要实现的。
+
+要增加自定义绘制逻辑，实现`ElementBackend::render`方法即可。
+
+```rust
+impl ElementBackend for HelloBackend {
+    ...
+    fn render(&mut self) -> RenderFn {
+        // 升级元素弱引用为强引用
+        let element = self.element_weak.upgrade_mut().unwrap();
+        // 获取元素尺寸信息
+        let bounds = element.get_bounds();
+        // 获取元素中心坐标
+        let center = (bounds.width / 2.0, bounds.height / 2.0);
+        // 计算半径
+        let radius = f32::min(center.0, center.1);
+        RenderFn::new(move |painter| {
+            let mut paint = Paint::default();
+            // 使用填充样式
+            paint.set_style(PaintStyle::Fill);
+            paint.set_color(Color::from_rgb(0, 80, 0));
+            // 绘制圆形
+            painter.canvas.draw_circle(center, radius, &paint);
+        })
+    }
+}
+```
+
+`render`方法返回了一个`RenderFn`对象，里面包含了我们组件的绘制逻辑，在以上示例中，我们绘制了一个实心圆，重新运行，看看最终效果：
+
+<Image src={renderImg} alt="custom element with renderer"  width="300" />
+
+### 相关代码和参考示例
+
+本文完整代码可在Deft仓库中找到：https://github.com/deft-ui/deft/blob/main/examples/custom_element.rs
+
+更多参考示例：
+
+1. 视频播放(ffmpeg)：https://github.com/deft-ui/deft-video
+2. 远程桌面(SPICE)：https://github.com/kasonyang/tiny-spice
+
+

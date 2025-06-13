@@ -9,11 +9,15 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Deft',
+			defaultLocale: 'en',
 			locales: {
-				root: {
+				en: {
+					label: 'English'
+				  },
+				'zh-cn': {
 					label: '简体中文',
 					lang: 'zh-CN',
-				},
+				  },
 			},
 			social: {
 				github: 'https://github.com/deft-ui/deft',
@@ -21,96 +25,161 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: '入门',
+					translations: {
+						'zh-CN': '入门',
+					},
 					items: [
 						{
 							label: "简介",
+							translations: {
+								'zh-CN': '简介',
+							},
 							slug: "guides/what-is-deft",
 						},
 						{
-							label: "环境准备",
+							label: "Environment Setup",
+							translations: {
+								'zh-CN': '环境准备',
+							},
 							slug: "guides/prerequisites",
 						},
 						{
-							label: "创建第一个工程",
+							label: "Create First Project",
+							translations: {
+								'zh-CN': '创建第一个工程',
+							},
 							slug: "guides/create-project",
 						},
 						{
-							label: "可选特性",
+							label: "Optional Features",
+							translations: {
+								'zh-CN': '可选特性',
+							},
 							slug: "guides/features",
 						},
 						{
 							label: "架构",
+							translations: {
+								'zh-CN': '架构',
+							},
 							slug: "guides/architecture",
 						}
 					],
 				},
 				{
-					label: '组件',
+					label: 'Components',
+					translations: {
+						'zh-CN': '组件',
+					},
 					items: [
 						// {
 						// 	label: '安装',
 						// 	slug: 'components/install'
 						// },
 						{
-							label: '组件速览',
+							label: 'Components Preview',
+							translations: {
+								'zh-CN': '组件预览',
+							},
 							slug: "components/gallery",
 						},
 						{
-							label: '基类 Element',
+							label: 'Element',
+							translations: {
+								'zh-CN': '基类 Element',
+							},
 							slug: 'components/element',
 						},
 						{
-							label: '标签 Label',
+							label: 'Label',
 							slug: 'components/label',
+							translations: {
+								'zh-CN': '标签 Label',
+							},
 						},
 						{
-							label: '按钮 Button',
+							label: 'Button',
 							slug: 'components/button',
+							translations: {
+								'zh-CN': '按钮 Button',
+							}
 						},
 						{
-							label: '图片 Image',
+							label: 'Image',
 							slug: 'components/image',
+							translations: {
+								'zh-CN': '图片 Image',
+							}
 						},
 						{
-							label: '单行输入框 TextInput',
+							label: 'TextInput',
 							slug: 'components/text-input',
+							translations: {
+								'zh-CN': '单行输入框 TextInput',
+							}
 						},
 						{
-							label: '多行输入框 TextEdit',
+							label: 'TextEdit',
 							slug: 'components/text-edit',
+							translations: {
+								'zh-CN': '多行输入框 TextEdit',
+							}
 						},
 						{
-							label: '单选按钮 Radio',
+							label: 'Radio',
 							slug: 'components/radio',
+							translations: {
+								'zh-CN': '单选按钮 Radio',
+							}
 						},
 						{
-							label: '复选框 Checkbox',
+							label: 'Checkbox',
 							slug: 'components/checkbox',
+							translations: {
+								'zh-CN': '复选框 Checkbox',
+							}
 						},
 						{
-							label: '下拉框 Select',
+							label: 'Select',
 							slug: 'components/select',
+							translations: {
+								'zh-CN': '下拉框 Select',
+							}
 						},
 						{
-							label: '富文本 RichText',
+							label: 'RichText',
 							slug: 'components/rich-text',
+							translations: {
+								'zh-CN': '富文本 RichText',
+							}
 						},
 						{
-							label: '容器 Container',
+							label: 'Container',
 							slug: 'components/container',
+							translations: {
+								'zh-CN': '容器 Container',
+							}
 						},
 						// {
-						// 	label: '滚动容器 Scroll',
+						// 	label: 'Scroll',
 						// 	slug: 'components/scroll',
+						// 	translations: {
+						// 		'zh-CN': '滚动容器 Scroll',
 						// },
 						{
-							label: '视频 Video',
+							label: 'Video',
 							slug: 'components/video',
+							translations: {
+								'zh-CN': '视频 Video',
+							}
 						},
 					]
 				},
 				{
-					label: '样式',
+					label: 'Styles',
+					translations: {
+						'zh-CN': '样式',
+					},
 					items: [
 						{
 							label: '概述',
@@ -196,40 +265,67 @@ export default defineConfig({
 					]
 				},
 				{
-					label: '进阶',
+					label: 'Advanced',
+					translations: {
+						'zh-CN': '进阶',
+					},
 					items: [
 						{
-							label: '动画',
+							label: 'Animation',
 							slug: 'advanced/animation',
+							translations: {
+								'zh-CN': '动画',
+							}
 						},
 						{
 							label: 'Rust/JavaScript通信',
 							slug: 'advanced/ffi',
+							translations: {
+								'zh-CN': 'Rust/JavaScript通信',
+							}
 						},
 						{
-							label: '渲染器',
+							label: 'Renderers',
 							slug: 'advanced/renderers',
+							translations: {
+								'zh-CN': '渲染器',
+							}
 						},
 						{
-							label: '自定义组件',
+							label: 'Custom Component',
 							slug: 'advanced/custom-component',
+							translations: {
+								'zh-CN': '自定义组件',
+							}
 						},
 					]
 				},
 				{
-					label: '鸿蒙',
+					label: 'HarmonyOS',
+					translations: {
+						'zh-CN': '鸿蒙',
+					},
 					items: [
 						{
-							label: '快速开始',
-							slug: 'harmony/quick-start'
+							label: 'Get Started',
+							slug: 'harmony/quick-start',
+							translations: {
+								'zh-CN': '快速开始',
+							}
 						}
 					]
 				},
 				{
 					label: 'Android',
+					translations: {
+						'zh-CN': '安卓',
+					},
 					items: [
 						{
-							label: '快速开始',
+							label: 'Get Started',
+							translations: {
+								'zh-CN': '快速开始',
+							},
 							slug: 'android/quick-start'
 						}
 					]

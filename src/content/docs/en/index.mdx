@@ -1,0 +1,36 @@
+---
+title: Welcome to Deft
+description: Create fast, secure, cross-platform applications using Rust and JavaScript.
+template: splash
+hero:
+  tagline: Create high-performance, secure cross-platform applications.
+  image:
+    file: ../../../assets/houston.webp
+  actions:
+    - text: Get Started
+      link: /en/guides/what-is-deft/
+      icon: right-arrow
+    - text: Demo
+      link: /demos
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Features
+
+<CardGrid>
+	<Card title="Efficient & Secure" icon="rocket">
+        Rust as the underlying language balances both performance and security
+	</Card>
+	<Card title="Flexible" icon="seti:javascript">
+        JavaScript as the UI language, combined with React, provides greater flexibility
+	</Card>
+	<Card title="Cross-Platform" icon="laptop">
+        Supports desktop and mobile platforms, with a single codebase running across multiple devices
+	</Card>
+	<Card title="Consistent" icon="sun">
+        Unified JavaScript engine and rendering engine effectively avoid compatibility issues
+	</Card>
+</CardGrid>

@@ -1,36 +1,22 @@
 ---
-title: 欢迎来到Deft
+title: Welcome to Deft
 description: Create fast, secure, cross-platform applications using Rust and JavaScript.
 template: splash
+
 hero:
   tagline: 创建高性能、安全的跨平台应用
   image:
     file: ../../assets/houston.webp
   actions:
-    - text: 快速入门
-      link: /guides/what-is-deft/
+    - text: Get Started
+      link: /en/guides/what-is-deft/
       icon: right-arrow
-    - text: 查看示例
+    - text: Demo
       link: /demos
       icon: external
       variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import EnIndex from './en/index.mdx'
 
-## 特性
-
-<CardGrid>
-	<Card title="高效安全" icon="rocket">
-        Rust作为底层语言，同时兼顾性能和安全
-	</Card>
-	<Card title="灵活" icon="seti:javascript">
-        JavaScript作为UI语言，配合React，提供更多的灵活性
-	</Card>
-	<Card title="跨平台" icon="laptop">
-        支持桌面和移动平台，一套代码，多端运行
-	</Card>
-	<Card title="一致性" icon="sun">
-        统一的JavaScript引擎和渲染引擎，有效规避兼容性问题
-	</Card>
-</CardGrid>
+<EnIndex />
