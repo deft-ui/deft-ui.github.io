@@ -6,7 +6,6 @@ date: '2022-08-18'
 ## Platforms Dependencies
 **Linux**
 
-  这里仅以Debian12为例，其他Linux系统根据包管理工具的不同，安装命令和需要安装的包可能稍有不同。
   This is only an example for Debian12, other Linux systems may have different commands and packages to install.
 
   ```
@@ -18,41 +17,41 @@ date: '2022-08-18'
 
   1. Xcode
 
-     请前往Apple官网下载最新的[Xcode](https://apps.apple.com/gb/app/xcode/id497799835?mt=12) ,根据提示完成安装。
+     Please go to Apple's official webside to download the latest [Xcode](https://apps.apple.com/gb/app/xcode/id497799835?mt=12) and follow the prompts to complete the installation.
 
   2. Clang14+
 
-     Xcode自带Clang，请使用`clang --version`检查Clang版本，确保clang版本不低于14
+     Xcode comes with Clang, please use `clang --version` to check the Clang version, and ensure the Clang version is not less than 14.
 
 **Windows**
 
   1. Git
 
-     前往 https://git-scm.com/ 下载安装。
+     Go to https://git-scm.com/ to download and install.
 
   2. Clang14+
   
-     前往 https://github.com/llvm/llvm-project/releases/tag/llvmorg-18.1.8 下载
+     Go to https://github.com/llvm/llvm-project/releases/tag/llvmorg-18.1.8 to download and install.
 
-     如果下载的是手动安装版本，需要手动设置`LIBCLANG_PATH`环境变量指向llvm的`bin`目录。
+     If you download the manual installation version, you need to manually set the `LIBCLANG_PATH` environment variable to point to the `bin` directory of llvm.
 
   3. Visual C++ Build Tool 
 
-     可以先不安装，安装Rust时，选择安装`Visual Studio Community`即可。
+     You can install it later, when installing Rust, select `Visual Studio Community`.
 
 ## Install Rust
 
 **Linux/MacOS**
 
-  以下命令**无需**使用root权限执行
+  The following command **does not** need to be executed with root permissions.
   ```
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
   ```
-  更多安装方法请参考：https://www.rust-lang.org/zh-CN/learn/get-started
+  For More installation methods, refer to: https://www.rust-lang.org/zh-CN/learn/get-started
 
 **Windows**
 
-  下载[rustup-init.exe](https://static.rust-lang.org/rustup/dist/i686-pc-windows-gnu/rustup-init.exe) , 根据提示安装即可，如果系统还没有安装Visual Studio，安装向导里需要选择安装`Visual Studio Community`。
+  Download [rustup-init.exe](https://static.rust-lang.org/rustup/dist/i686-pc-windows-gnu/rustup-init.exe) and follow the prompts to install. If Visual Studio is not installed, you need to select `Visual Studio Community` during the installation.
 
 ## Install NodeJS
 
@@ -63,4 +62,4 @@ date: '2022-08-18'
   ```
 * Other Platforms
 
-  前往[NodeJS官网](https://nodejs.org/)下载最新的Node安装包，根据提示安装即可。
+  Go to the [NodeJS official webside] to download the latest Node installation package, and follow the prompts to install.

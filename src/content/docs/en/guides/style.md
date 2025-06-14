@@ -1,12 +1,12 @@
 ---
-title: 样式
+title: Style
 ---
 
-Deft支持内联和CSS选择器设置元素的样式。
+Deft supports inline and CSS selector to set element styles.
 
-## 导入CSS样式表
+## Import CSS Stylesheets
 
-原生方式
+Native way.
 ```javascript
 const css = `
 .btn {
@@ -18,9 +18,9 @@ navigator.stylesheet.append(css);
 
 Webpack
 
-通过`deft-style-loader`可以实现css的导入和热加载，使用方法类似于`style-loader`。
+Use`deft-style-loader` to import and hot load css files, similar to `style-loader`.
 
-配置示例：
+Configuration example:
 
 ```
 module.exports = {
@@ -37,9 +37,9 @@ module.exports = {
 };
 ```
 
-## 内联样式
+## Inline Styles
 
-Deft也可以通过CSS内联的方式设置元素的样式，默认采用flex布局，属性名使用小驼峰规则命名。比如设置居中布局：
+Deft also supports inline styles, which use flex layout by default, and property names use camel case. For example, to set a centered layout:
 
 ```jsx
 <Container
@@ -52,15 +52,16 @@ Deft也可以通过CSS内联的方式设置元素的样式，默认采用flex布
 </Container>
 ```
 
-## 继承
+## Inherited Styles
 
-样式支持继承，比如某个元素设置了`color`属性，其子元素在不设置`color`属性的情况下，将继承父元素的`color`计算值。
+Styles support inheritance, for example, if an element sets the `color` property, its sub-elements will inherit the `color` computed value without setting the `color` property.
 
-## 盒子模型
+## Box Model
 
-Deft的盒子模型采用的是Web CSS的`border-box`模型，通过margin定义元素的外边距，padding定义元素的内边距，border定义元素边框，border-radius定义圆角边框，宽高包含内边距和边框。
+Deft's box model is based on the `border-box` model of the Web CSS, with margin defining the element's margin, padding defining the element's padding, border defining the element's border, and border-radius defining the rounded border. The width and height include padding and border.
 
-**使用示例**
+
+**Example**
 ```jsx
 <Container style={{
     width: 100,
@@ -72,59 +73,59 @@ Deft的盒子模型采用的是Web CSS的`border-box`模型，通过margin定义
 }}>...</Container>
 ```
 
-## 布局方式 display
+## display
 
-通过display属性定义元素的布局方式，支持以下取值：
+Use `display` to define the layout of the element, supporting the following values:
 
-**flex**(默认) flex布局
+**flex**(default) flex layout
 
-**none** 不显示
+**none** no display
 
-##  主轴方向 flex-direction
+##  Main Axis Direction flex-direction
 
-flex-direction定义主轴的方向，支持以下取值：
+`flex-direction` defines the main axis direction, supporting the following values:
 
-**column**(默认值) 主轴为垂直方向，起点在上沿
+**column**(default) Mian axis is vertical, start point on the top
 
-**column-reverse** 主轴为垂直方向，起点在下沿
+**column** Main axis is vertical, start point on the bottom
 
-**row**  主轴为水平方向，起点在左端
+**row** Main axis is horizontal, start point on the left
 
-**row-reverse** 主轴为水平方向，起点在右端
+**row-reverse** Main axis is horizontal, start point on the right
 
-_注意：和Web不同，flex-direction默认值为column，而不是row_
+_Note: Unlike the web, the default value of `flex-direction` is column, not `row`_
 
-## 主轴对齐 justify-content
+## Main Axis Alignment: justify-content
 
-justify-content定义元素在主轴的对齐方式。支持以下取值：
+`justify-content` defines the alignment of elements on the main axis. The following values are supported:
 
-**flex-start**(默认) 左对齐
+**flex-start**(default) Main axis start alignment.
 
-**center** 居中对齐
+**center** Main axis center alignment.
 
-**flex-end** 右对齐
+**flex-end** Main axis end alignment.
 
-**space-between** 两端对齐，元素之间的间隔都相等
+**span-between** Align left and right, the interval between the elements is equal.
 
-**space-around** 每个元素两侧的间隔相等
+**space-around** Each element is equally spaced on both sides.
 
 **space-evenly**
 
-## 交叉轴对齐 align-items
+## Cross-axis Alignment: align-items
 
-align-items 定义元素在交叉轴上如何对齐，支持以下取值：
+`align-items` defines how elements are aligned on the cross axis, supporting the following values:
 
-**auto** 自动
+**auto** 
 
-**flex-start** 交叉轴的起点对齐
+**flex-start** Cross-axis start alignment
 
-**center** 交叉轴的中点对齐
+**center** Cross-axis center alignment
 
-**flex-end** 交叉轴的终点对齐
+**flex-end** Cross-axis end alignment
 
-**stretch** 占满整个容器高度
+**stretch** Stretch to fill the entire container height
 
-**baseline** 元素的第一行文字的基线对齐
+**baseline** Align the baseline of the first line of text
 
 **space-between** 
 
@@ -133,56 +134,56 @@ align-items 定义元素在交叉轴上如何对齐，支持以下取值：
 
 ## flex-grow
 
-flex-grow 定义元素的放大比例，默认为0，即如果存在剩余空间，也不放大。
+`flex-grow` defines the element's growth ratio, with a default value of 0, if there is remaining space, it will not be enlarged.
 
 ## flex-shrink
 
-flex-shrink 定义了元素的缩小比例，默认为1，即如果空间不足，该元素将缩小。
+`flex-shrink` defines the element's shrink ratio, with a default value of 1, if there is not enough space, the element will shrink.
 
 ## flex-basis
 
-flex-basis 定义了在分配多余空间之前，元素占据的主轴空间,默认为元素原本大小。
+`flex-basis` defines the size of the element before extra space is allocated, with a default value of the element's original size.
 
-## 定位 position
+## position
 
-支持`static`,`relative`和`absolute`等定位方式，默认为`static`。
+Supports `static`, `relative` and `absolute` positioning methods, with a default value of `static`.
 
-## 文字样式
+## Text Styles
 
-文字样式通过以下属性定义：
+Text styles are defined through the following properties:
 
-**color** 文本颜色
+**color** Text color
 
-**font-size** 文本字体大小
+**font-size** Text font size
 
-**line-height** 文本行高
+**line-height** Text line height
 
-_注意：由于样式的继承性，设置文本样式将会影响其子元素的文本样式_
+_Note: Due to the inheritance of styles, setting text styles will affect the text styles of sub-elements_
 
-## 背景色 background-color
+## background-color
 
-`background-color` 定义元素背景色，目前仅支持单一颜色。
+`background-color` defines the background color of the element, currently only supports a single color.
  
-**示例**
+**Example**
 ```jsx
 <Container style={{
     backgroundColor: '#0006'
 }}>...</Container>
 ```
 
-## 变换 transform
+## transform
 
-`transform`允许你旋转、缩放、倾斜或平移指定元素。
+`transform` allows you to rotate, scale, skew or translate the specified element.
 
-支持以下方法：
+Supported methods:
 
-**rotate** 旋转元素
+**rotate** Rotates the element.
 
-**translate** 平移元素
+**translate** Translates the element.
 
-**scale** 缩放元素
+**scale** Scales the element.
 
-**示例**
+**Example**
 ```jsx
 // 顺时针旋转45度
 <Container style={{

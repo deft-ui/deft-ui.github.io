@@ -24,13 +24,13 @@ export default defineConfig({
 			},
 			sidebar: [
 				{
-					label: '入门',
+					label: 'Get Started',
 					translations: {
 						'zh-CN': '入门',
 					},
 					items: [
 						{
-							label: "简介",
+							label: "Introduction",
 							translations: {
 								'zh-CN': '简介',
 							},
@@ -58,7 +58,7 @@ export default defineConfig({
 							slug: "guides/features",
 						},
 						{
-							label: "架构",
+							label: "Architecture",
 							translations: {
 								'zh-CN': '架构',
 							},
@@ -182,28 +182,46 @@ export default defineConfig({
 					},
 					items: [
 						{
-							label: '概述',
+							label: 'Overview',
 							slug: 'styles/overview',
+							translations: {
+								'zh-CN': '概述',
+							}
 						},
 						{
-							label: '属性',
+							label: 'Properties',
 							slug: 'styles/properties',
+							translations: {
+								'zh-CN': '属性',
+							}
 						},
 						{
-							label: '选择器',
+							label: 'Selector',
 							slug: 'styles/selector',
+							translations: {
+								'zh-CN': '选择器',
+							}
 						},
 						{
-							label: '长度',
+							label: 'Length',
 							slug: 'styles/length',
+							translations: {
+								'zh-CN': '长度',
+							}
 						},
 						{
-							label: '颜色',
+							label: 'Color',
 							slug: 'styles/color',
+							translations: {
+								'zh-CN': '颜色',
+							}
 						},
 						{
-							label: '2D变换',
+							label: '2D Transformation',
 							slug: 'styles/transform',
+							translations: {
+								'zh-CN': '2D变换',
+							}
 						}
 					]
 				},
@@ -211,56 +229,95 @@ export default defineConfig({
 					label: 'API',
 					items: [
 						{
-							label: '窗体 Window',
+							label: 'Window',
 							slug: 'api/window',
+							translations: {
+								'zh-CN': '窗体',
+							}
 						},
 						{
-							label: '网络请求 Fetch',
+							label: 'Fetch',
 							slug: 'api/fetch',
+							translations: {
+								'zh-CN': '网络请求',
+							}
 						},
 						{
 							label: 'WebSocket',
 							slug: 'api/websocket',
+							translations: {
+								'zh-CN': 'WebSocket',
+							}
 						},
 						{
-							label: '音频 Audio',
+							label: 'Audio',
 							slug: 'api/audio',
+							translations: {
+								'zh-CN': '音频',
+							}
 						},
 						{
-							label: '剪贴板 Clipboard',
+							label: 'Clipboard',
 							slug: 'api/clipboard',
+							translations: {
+								'zh-CN': '剪贴板',
+							}
 						},
 						{
-							label: '控制台 Console',
+							label: 'Console',
 							slug: 'api/console',
+							translations: {
+								'zh-CN': '控制台',
+							}
 						},
 						{
-							label: '文件对话框 FileDialog',
+							label: 'FileDialog',
 							slug: 'api/filedialog',
+							translations: {
+								'zh-CN': '文件对话框',
+							}
 						},
 						{
-							label: '本地储存 LocalStorage',
+							label: 'LocalStorage',
 							slug: 'api/localstorage',
+							translations: {
+								'zh-CN': '本地储存',
+							}
 						},
 						{
-							label: '进程 Process',
+							label: 'Process',
 							slug: 'api/process',
+							translations: {
+								'zh-CN': '进程',
+							}
 						},
 						{
-							label: '定时器 Timer',
+							label: 'Timer',
 							slug: 'api/timer',
+							translations: {
+								'zh-CN': '定时器',
+							}
 						},
 						{
-							label: '任务栏图标 SystemTray',
+							label: 'SystemTray',
 							slug: 'api/tray',
+							translations: {
+								'zh-CN': '任务栏图标',
+							}
 						},
 						{
-							label: '后台线程 Worker',
+							label: 'Worker',
 							slug: 'api/worker',
+							translations: {
+								'zh-CN': '后台线程',
+							}
 						},
 						{
 							label: 'Sqlite',
 							slug: 'api/sqlite',
+							translations: {
+								'zh-CN': 'Sqlite',
+							}
 						},
 					]
 				},
@@ -307,7 +364,7 @@ export default defineConfig({
 					},
 					items: [
 						{
-							label: 'Get Started',
+							label: 'Quick Start',
 							slug: 'harmony/quick-start',
 							translations: {
 								'zh-CN': '快速开始',
@@ -322,7 +379,7 @@ export default defineConfig({
 					},
 					items: [
 						{
-							label: 'Get Started',
+							label: 'Quick Start',
 							translations: {
 								'zh-CN': '快速开始',
 							},
