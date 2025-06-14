@@ -39,7 +39,7 @@ module.exports = {
 
 ## 内联样式
 
-Deft也可以通过CSS内联的方式设置元素的样式，默认采用flex布局，属性名使用小驼峰规则命名。比如设置居中布局：
+Deft也可以通过CSS内联的方式设置元素的样式，默认采用`flex`布局，属性名使用小驼峰规则命名。比如设置居中布局：
 
 ```jsx
 <Container
@@ -58,7 +58,7 @@ Deft也可以通过CSS内联的方式设置元素的样式，默认采用flex布
 
 ## 盒子模型
 
-Deft的盒子模型采用的是Web CSS的`border-box`模型，通过margin定义元素的外边距，padding定义元素的内边距，border定义元素边框，border-radius定义圆角边框，宽高包含内边距和边框。
+Deft的盒子模型采用的是Web CSS的`border-box`模型，通过margin定义元素的外边距，`padding`定义元素的内边距，`border`定义元素边框，`border-radius`定义圆角边框，宽高包含内边距和边框。
 
 **使用示例**
 ```jsx
@@ -92,11 +92,11 @@ flex-direction定义主轴的方向，支持以下取值：
 
 **row-reverse** 主轴为水平方向，起点在右端
 
-_注意：和Web不同，flex-direction默认值为column，而不是row_
+_注意：和Web不同，`flex-direction`默认值为`column`，而不是`row`_
 
 ## 主轴对齐 justify-content
 
-justify-content定义元素在主轴的对齐方式。支持以下取值：
+`justify-content`定义元素在主轴的对齐方式。支持以下取值：
 
 **flex-start**(默认) 左对齐
 
@@ -112,7 +112,7 @@ justify-content定义元素在主轴的对齐方式。支持以下取值：
 
 ## 交叉轴对齐 align-items
 
-align-items 定义元素在交叉轴上如何对齐，支持以下取值：
+`align-items` 定义元素在交叉轴上如何对齐，支持以下取值：
 
 **auto** 自动
 
@@ -133,15 +133,15 @@ align-items 定义元素在交叉轴上如何对齐，支持以下取值：
 
 ## flex-grow
 
-flex-grow 定义元素的放大比例，默认为0，即如果存在剩余空间，也不放大。
+`flex-grow` 定义元素的放大比例，默认为0，即如果存在剩余空间，也不放大。
 
 ## flex-shrink
 
-flex-shrink 定义了元素的缩小比例，默认为1，即如果空间不足，该元素将缩小。
+`flex-shrink` 定义了元素的缩小比例，默认为1，即如果空间不足，该元素将缩小。
 
 ## flex-basis
 
-flex-basis 定义了在分配多余空间之前，元素占据的主轴空间,默认为元素原本大小。
+`flex-basis` 定义了在分配多余空间之前，元素占据的主轴空间,默认为元素原本大小。
 
 ## 定位 position
 
