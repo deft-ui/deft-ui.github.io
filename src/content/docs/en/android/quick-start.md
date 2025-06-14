@@ -1,16 +1,16 @@
 ---
-title: 快速开始
+title: Quick Start
 ---
 
-### 环境准备
+### Environment Preparation
 
-请确认[Deft基础环境](/guides/prerequisites)已经配置。
+Please make sure that the [Deft basic environment](/guides/prerequisites) is configured.
 
-**安装NDK**
+**Install NDK**
 
-1. 前往Android官网，下载安装[Android Studio](https://developer.android.com/studio)
+1. Go to Android official webside to download and install Android Studio.
 
-2. 使用Android Studio里的`SDK Manager`安装如下组件。
+2. Use the `SDK Manager` in Android Studio to install the following components.
 
     * Android SDK Platform
     * Android SDK Platform-Tools
@@ -18,19 +18,19 @@ title: 快速开始
     * Android SDK Build-Tools
     * Android SDK Command-line Tools
 
-**安装JRE 17**
+**Install JRE 17**
 
-**方法1**
+**Method 1**
 
-前往[Java官网](https://www.java.com/)下载安装，也可安装其他厂商提供的JRE/JDK。
+Go to [Java Official](https://www.java.com/) to download and install. You can also install JRE/JDK provided by other vendors.
 
-**方法2:** 
+**Method 2**
 
-使用Android Studio自带的JRE，直接把`AndroidStudio安装目录/jbr/bin`追加到`PATH`变量里即可。
+Using the JRE provided by Android Studio, you can directly add `AndroidStudio安装目录/jbr/bin` to the `PATH` variable.
 
-**环境变量配置**
+**Environment variable configuration**
 
-注意：以下代码仅供参考，SDK和NDK地址根据实际情况填写，目前仅支持NDK 26
+Note: The following code is only for reference, the SDK and NDK addresses need to be filled in according to actual cases, currently only NDK 26 is supported
 
 **Linux**
 
@@ -61,7 +61,7 @@ export ANDROID_NDK_HOME="$ANDROID_HOME/ndk/26.3.11579264"
 
 [//]: # (```)
 
-另外，需要安装安卓相关targets和`deft-cli`工具包，执行以下代码可快速安装。
+Other, you need to install the Android related targets and `deft-cli` toolkit. You can install them by running the following code:
 
 ```bash
 cargo install deft-cli
@@ -69,31 +69,31 @@ rustup target add aarch64-linux-android
 rustup target add x86_64-linux-android
 ```
 
-### 创建工程
+### Create Project
 
-执行下面命令，快速创建新工程，demo为新工程名称。
+Execute the following command to create a new project, demo is the name of the new project.
 ```bash
 npm create deft demo
 ```
-根据自己的喜好选择语言和框架。
+Select the language and framework according to your preference.
 
-命令执行完后，会在当前目录下创建一个`demo`项目，默认情况下，新建的工程是不包含Android工程文件的，执行下面命令，初始化Android工程。
+After the command is executed, a `demo` project will be created in the current directory, by default, the newly created project does not contain the Android project file. Execute the following command to initialize the Android project.
 
 ```bash
 cd demo
 deft init android
 ```
 
-AppID可以随便填，避免和已有App重复且格式正确即可，参考示例：`com.example.myapp`。
+AppID can be filled in arbitrarily, as long as the format is correct, for example: `com.example.myapp`.
 
-然后执行以下代码启动项目：
+Then execute the following code to start the project:
 
 ```bash
 npm install
 npm run dev
 ```
 
-启动成功后，会看到如下输出：
+After the command is executed, you will see the following output:
 
 ```text
 ...
@@ -108,35 +108,35 @@ Press q to quit
 
 ```
 
-### 构建预览
+### Build Preview
 
-预览前，确保Android设备已经连接到电脑并开启USB调试模式（如果是使用AndroidStudio创建的模拟器，确保模拟器已经启动即可，不需要额外设置）
+Before preview, make sure that the Android device is connected to the computer and the USB debugging mode is turned on (if the simulator is created using AndroidStudio, it does not need to be set up separately).
 
-根据自己的Android设备架构(windows+模拟器一般是x86_64，真机或Mac+模拟器一般是arm64)，按`a`或`x`即可开始构建预览应用。首次构建，需要下载依赖，所以耗时可能会比较长，可以配置cargo镜像提高下载速度。
+Depending on the architecture of your Android device (Windows + simulator is x86_64, the real device or Mac + simulator is arm64), you can start the preview application by pressing `a` or `x`. The first build may take a long time to download dependencies, you can configure cargo mirror to speed up download.
 
-构建成功后，会自动在已连接的Android设备内启动预览，可以直接修改ui目录下的JS/TS文件实时预览效果。
+After the command is executed, the preview application will be started on the connected Android device. You can directly modify the JS/TS files in the `ui` directory to preview the effect in real time.
 
-# 目录结构
+# Directory Structure
 
 ```text
-├── android               -- Android工程相关文件
-├── build.rs              -- Cargo构建脚本
-├── Cargo.toml            -- Cargo项目配置文件
-├── package.json          -- JS项目配置文件
-├── src                   -- Rust源代码
+├── android               -- Android project directory
+├── build.rs              -- Cargo build script file
+├── Cargo.toml            -- Cargo project configuration file
+├── package.json          -- JS project configuration file
+├── src                   -- Rust source code
 │     └── main.rs
-├── tsconfig.json         -- TypeScript配置文件
-├── ui                    -- JS/CSS源码
-│     ├── main.ts         -- JS入口文件
+├── tsconfig.json         -- TypeScript configuration file
+├── ui                    -- JS/CSS source code
+│     ├── main.ts         -- JS entry file
 │     ├── App.vue
 │     └── deft-env.d.ts
-└── webpack.config.js     -- Webpack配置文件
+└── webpack.config.js     -- Webpack configuration file
 ```
 
-# 打包
+# Build
 
-执行下面命令构建release版so库
+Execute the following command to build the release version of the so library.
 ```bash
 npm run build:android
 ```
-构建完成后，使用Android Studio打开`android`目录，和普通Android应用一样打包即可。
+After the command is executed, open the `android` directory with Android Studio, and package it as a normal Android application.

@@ -3,11 +3,11 @@ title:  Clipboard
 ---
 Clipboard used to write/read clipboard content.
 
-**使用**
+**Usage**
 ```javascript
-// 写入剪贴板
+// Write to clipboard
 await navigator.clipboard.writeText("Hello");
 
-// 读取剪贴板
+// Read clipboard
 const content = await navigator.clipboard.readText();
 ```

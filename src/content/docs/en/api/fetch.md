@@ -1,5 +1,5 @@
 ---
-title:  Fetch Http requests
+title:  Fetch
 ---
 
 Fetch used to initiate Http requests.

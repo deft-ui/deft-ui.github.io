@@ -6,25 +6,24 @@ title: Renderers
 
 Deft comes with the following 3 renderers.
 
-| Name         | Description          | Support Platforms                         |
-|------------|-------------|------------------------------|
-| SoftBuffer | CPU渲染       | Windows/MacOS/Linux          | 
-| GL         | GPU渲染       | Windows/MacOS/Linux/Android  | 
-| SoftGL     | CPU渲染，GPU呈现 | Windows/MacOS/Linux/Android  |
+| Name       | Description                     | Support Platforms           |
+|------------|---------------------------------|-----------------------------|
+| SoftBuffer | CPU rendering                   | Windows/MacOS/Linux         | 
+| GL         | GPU rendering                   | Windows/MacOS/Linux/Android | 
+| SoftGL     | CPU rendering, GPU presentation | Windows/MacOS/Linux/Android |
 
-通常，`GL`渲染器拥有更好的性能，但是会占用更多的内存，而`SoftGL`适合不支持`SoftBuffer`但是又想使用CPU渲染的场景。
-U 
+Usually, `GL` renderer has better performance, but consumes more memory, and `SoftGL` is suitable for scenarios where `SoftBuffer` is not supported but still want to use CPU rendering.
 
-默认情况下，Deft会根据系统支持情况，按照表里的顺序，自动匹配到一个可用的渲染器。如果你希望更改默认的匹配顺序，可以通过以下方法设置。
+By default, Deft will automatically match a renderer based on the order in the table. If you want to change the default matching order, you can set it as follows.
 
-1. 创建窗口时，指定`preferredRenderes`参数，比如：
+1. Create a window and specify the `preferredRenderers` parameter, for example:
    ```javascript
     const window = new Window({
-        // 优先使用GL渲染器
+        // prioritize use GL renderers
         preferredRenderers: ["GL", "SoftBuffer"]
     });
    ```
-2. 设置`DEFT_RENDERERS`环境变量，对所有Deft应用生效，比如：
+2. Set the `DEFT_RENDERERS` environment variable, which will take effect for all Deft applications, for example:
    ```
    export DEFT_RENDERERS=GL,SoftBuffer
    ```

@@ -1,14 +1,14 @@
 ---
-title: 快速开始
+title: Quick Start
 ---
 
-### 环境准备
+### Environment Preparation
 
-请确认[Deft基础环境](/guides/prerequisites)已经配置
+Please make sure that the [Deft basic environment](/guides/prerequisites) is configured.
 
-然后需要安装`DevEco Studio`，如果未安装，直接去官网下载安装即可。
+Then you need to install `DevEco Studio`, if not installed, you can directly download and install it from the official website.
 
-另外，需要安装鸿蒙相关targets和`deft-cli`工具包，执行以下代码可快速安装。
+Otherwise, you need to install Harmony related targets and the'deft-cli 'toolkit. You can install them by running the following code:
 
 ```bash
 rustup target add aarch64-unknown-linux-ohos
@@ -16,51 +16,51 @@ rustup target add x86_64-unknown-linux-ohos
 cargo install deft-cli
 ```
 
-DevEcoStudio安装完成后，进入`File`->`Settings`->`OpenHarmony SDK`，下载SDK，API版本选择14或者15，需要安装`Native`和`Toolchains`模块，其他模块可以不选。
+After DevEcoStudio is installed, go to `File`->`Settings`->`OpenHarmony SDK`, download the SDK, select API version 14 or 15, and install the `Native` and `Toolchains` modules. Other modules can be left unselected.
 
-SDK安装完成后，配置一下`OHOS_SDK_HOME`和`DEVECO_HOME`环境变量。
+SDK installation is complete, configure the `OHOS_SDK_HOME` and `DEVECO_HOME` environment variables.
 
-`OHOS_SDK_HOME`为SDK安装路径（含版本号），`DEVECO_HOME`为DevEcoStudio安装目录。
+`OHOS_SDK_HOME` is the SDK installation path (including the version number), and `DEVECO_HOME` is the DevEcoStudio installation directory.
 
-Windows参考示例：
+Windows example:
 
 ```bash
 set OHOS_SDK_HOME=C:\Users\dev\AppData\Local\OpenHarmony\Sdk\15
 set DEVECO_HOME=C:\Program Files\Huawei\DevEco Studio
 ```
 
-MacOS参考示例:
+MacOS example:
 
 ```
 export OHOS_SDK_HOME=/Users/dev/Library/OpenHarmony/Sdk/15
 export DEVECO_HOME=/Applications/DevEco-Studio.app/Contents
 ```
 
-### 创建工程
+### Create Project
 
-执行下面命令，快速创建新工程，demo为新工程名称。
+Execute the following command to create a new project, demo is the name of the new project.
 ```bash
 npm create deft@0.7 demo
 ```
-根据自己的喜好选择语言和框架。
+Select the language and framework according to your preference.
 
-命令执行完后，会在当前目录下创建一个`demo`项目，默认情况下，新建的工程是不包含鸿蒙工程文件的，执行下面命令，初始化鸿蒙工程。
+After the command is executed, a `demo` project will be created in the current directory, by default, the newly created project does not contain the Harmony project file. Execute the following command to initialize the Harmony project.
 
 ```bash
 cd demo
 deft init ohos
 ```
 
-AppID随便填，格式正确即可，参考示例：`com.example.myapp`。
+AppID can be filled in arbitrarily, as long as the format is correct, for example: `com.example.myapp`.
 
-然后执行以下代码启动项目：
+Then execute the following code to start the project:
 
 ```bash
 npm install
 npm run dev
 ```
 
-启动成功后，会看到如下输出：
+After the project is started, you will see the following output:
 
 ```text
 ...
@@ -75,35 +75,35 @@ Press q to quit
 
 ```
 
-### 构建预览
+### Build Preview
 
-预览前，确保鸿蒙设备已经连接到电脑并开启USB调试模式（如果是使用DevEcoStudio创建的模拟器，确保模拟器已经启动即可，不需要额外设置）
+Before previewing, make sure that the Harmony device is connected to the computer and enabled USB debugging (if the simulator is created using DevEcoStudio, you do not need to set it up separately)
 
-根据自己的鸿蒙设备架构(windows+模拟器一般是x86_64，真机或Mac+模拟器一般是arm64)，按`e`或`h`即可开始构建预览应用。首次构建，需要下载依赖，所以耗时可能会比较长，可以配置cargo镜像提高下载速度。
+Depending on the architecture of your Harmony device (Windows + simulator is x86_64, the simulator or Mac + simulator is arm64), press `e` or `h` to start building and previewing the application. The first build may take some time to download dependencies, so you can configure the cargo mirror to speed up the download.
 
-构建成功后，会自动在已连接的鸿蒙设备内启动预览，可以直接修改ui目录下的JS/TS文件实时预览效果。
+After the build is successful, the preview will automatically start on the connected Harmony device. You can modify the JS/TS files in the `ui` directory to preview the effect in real time.
 
-# 目录结构
+# Directory Structure
 
 ```text
-├── ohos                  -- 鸿蒙工程相关文件
-├── build.rs              -- Cargo构建脚本
-├── Cargo.toml            -- Cargo项目配置文件
-├── package.json          -- JS项目配置文件
-├── src                   -- Rust源代码
+├── ohos                  -- Harmony project files
+├── build.rs              -- Cargo build script file
+├── Cargo.toml            -- Cargo project configuration file
+├── package.json          -- JS project configuration file
+├── src                   -- Rust source code
 │     └── main.rs
-├── tsconfig.json         -- TypeScript配置文件
-├── ui                    -- JS/CSS源码
-│     ├── main.ts         -- JS入口文件
+├── tsconfig.json         -- TypeScript configuration file
+├── ui                    -- JS/CSS source code
+│     ├── main.ts         -- JS entry file
 │     ├── App.vue
 │     └── deft-env.d.ts
-└── webpack.config.js     -- Webpack配置文件
+└── webpack.config.js     -- Webpack configuration file
 ```
 
-# 打包
+# Build
 
-执行下面命令构建release版so库
+Execute the following command to build the release version of the so library:
 ```bash
 npm run build:ohos
 ```
-构建完成后，使用`DevEcoStudio`打开`ohos`目录，和普通鸿蒙应用一样打包即可。
+After the build is complete, open the `ohos` directory using `DevEcoStudio` and package it as a normal Harmony application.

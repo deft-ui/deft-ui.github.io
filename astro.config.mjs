@@ -335,7 +335,7 @@ export default defineConfig({
 							}
 						},
 						{
-							label: 'Rust/JavaScript通信',
+							label: 'Rust/ JavaScript Communication',
 							slug: 'advanced/ffi',
 							translations: {
 								'zh-CN': 'Rust/JavaScript通信',

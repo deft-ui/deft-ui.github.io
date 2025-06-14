@@ -28,7 +28,6 @@ animation_create("my-rotate", {
 
 _Note: The animation name should be unique_
 
-## 应用动画
 ## Apply Animation
 
 Like Web CSS animations, Deft applies animations through css, supporting the following CSS properties:

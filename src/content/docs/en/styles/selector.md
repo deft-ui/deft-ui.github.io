@@ -32,7 +32,7 @@ button:hover {
 ### Pseudo-element Selectors
 
 ```css
-/* 设置滚动条样式 */
+/* Set scroll bar style */
 scroll::scrollbar {
     background: #E1E1E1;
 }
