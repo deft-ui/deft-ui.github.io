@@ -28,14 +28,14 @@ function App() {
 **Properties**
 
 | Property | Description      | Type    | Default |
-|------------|------------------|---------|---------|
-| label      | Option text      | string  | -       |
-| checked    | Whether selected | boolean | -       |
-| disabled   | Whether disabled | boolean | false   |
+|----------|------------------|---------|---------|
+| label    | Option text      | string  | -       |
+| checked  | Whether selected | boolean | -       |
+| disabled | Whether disabled | boolean | false   |
 
 
 **Events**
 
-| Event   | Description             | Event Type |
+| Event  | Description             | Event Type |
 |--------|-------------------------|------------|
 | change | Selection state changed | -          |

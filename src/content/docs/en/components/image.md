@@ -16,5 +16,5 @@ function App() {
 **Properties**
 
 | Property | Description                                                                              | Type   | Default |
-|------------|------------------------------------------------------------------------------------------|--------|---------|
-| src        | Image address, which can be a local file path or an internal connection image (data url) | string | -       |
+|----------|------------------------------------------------------------------------------------------|--------|---------|
+| src      | Image address, which can be a local file path or an internal connection image (data url) | string | -       |

@@ -18,7 +18,7 @@ function App() {
 
 **Properties**
 
-| Property | Description      | Type       | Default |
+| Property   | Description      | Type       | Default |
 |------------|------------------|------------|---------|
 | label      | Option content   | string     | -       |
 | checked    | Whether selected | boolean    | -       |
@@ -27,6 +27,6 @@ function App() {
 
 **Events**
 
-| Event   | Description             | Event Type |
+| Event  | Description             | Event Type |
 |--------|-------------------------|------------|
 | change | Selection state changed | -          |

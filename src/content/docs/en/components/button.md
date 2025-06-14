@@ -16,6 +16,6 @@ function App() {
 **Properties**
 
 | Property | Description        | Type    | Default |
-|------------|--------------------|---------|---------|
-| disabled   | disable the button | boolean | false   |
+|----------|--------------------|---------|---------|
+| disabled | Disable the button | boolean | false   |
 

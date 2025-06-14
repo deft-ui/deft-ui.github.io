@@ -15,16 +15,16 @@ function App() {
 
 **Properties**
 
-| Property  | Description               | Type                 | Default |
+| Property    | Description               | Type                 | Default |
 |-------------|---------------------------|----------------------|---------|
-| text        | text content              | string               | -       |
-| placeholder | placeholder of Input      | string               | -       |
-| disabled    | whether Input is disabled | boolean              | false   |
+| text        | Text content              | string               | -       |
+| placeholder | Placeholder of Input      | string               | -       |
+| disabled    | Whether Input is disabled | boolean              | false   |
 
 
 **Events**
 
-| Event        | Description                          | Event Type |
+| Event       | Description                          | Event Type |
 |-------------|--------------------------------------|------------|
-| textchange  | triggers when the Input value change | -          |
-| caretchange | the cursor changes                   | -          |
+| textchange  | Triggers when the Input value change | -          |
+| caretchange | The cursor changes                   | -          |

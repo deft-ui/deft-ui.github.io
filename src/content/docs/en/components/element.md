@@ -8,7 +8,7 @@ Element is the base class of all components, and the properties, methods, and ev
 
 **Properties**
 
-| Property   | Description                        | type             | Default |
+| Property     | Description                        | type             | Default |
 |--------------|------------------------------------|------------------|---------|
 | id           | Element's unique device identifier | number           | -       |
 | parent       | Parent element                     | Element          | -       |
@@ -35,9 +35,9 @@ Element is the base class of all components, and the properties, methods, and ev
 
 **Events**
 
-| Event         | Description                      | Event type               |
+| Event        | Description                      | Event type         |
 |--------------|----------------------------------|--------------------|
-| boundschange | element position or size change  | IBoundsChangeEvent |
+| boundschange | Element position or size change  | IBoundsChangeEvent |
 | focus        | Gains focus                      | -                  |
 | blur         | Loses focus                      | -                  |
 | click        | Click                            | IMouseEvent        |

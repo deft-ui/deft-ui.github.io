@@ -16,5 +16,5 @@ function App() {
 **Properties**
 
 | Property | Description  | Type   | Default |
-|------------|--------------|--------|---------|
-| text       | Text content | string | -       |
+|----------|--------------|--------|---------|
+| text     | Text content | string | -       |
