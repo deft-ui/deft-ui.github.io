@@ -1,10 +1,10 @@
 ---
-title: 下拉框 Select
+title: Select
 ---
 
-下拉框用于下拉单项选择
+Select Component for single choice
 
-**使用**
+**Usage**
 
 ```javascript
 import {Select} from 'deft-react';
@@ -17,18 +17,18 @@ function App() {
 }
 ```
 
-**属性**
+**Properties**
 
-| 属性          | 说明   | 类型             | 默认值   |
-|-------------|------|----------------|-------|
-| value       | 当前值  | string         | -     |
-| options     | 选项   | SelectOption[] | -     |
-| placeholder | 提示   | string         | -     |
-| disabled    | 是否禁用 | boolean        | false |
+| Property    | Description       | Type           | Default |
+|-------------|-------------------|----------------|---------|
+| value       | Current value     | string         | -       |
+| options     | Selection options | SelectOption[] | -       |
+| placeholder | Placeholder text  | string         | -       |
+| disabled    | Whether disabled  | boolean        | false   |
 
 
-**事件**
+**Events**
 
-| 事件      | 说明       | 事件类型               |
-|---------|----------|--------------------|
-| change  | 选项状态发生变化 |                    |
+| Event  | Description             | Event Type |
+|--------|-------------------------|------------|
+| change | Selection state changed | -          |

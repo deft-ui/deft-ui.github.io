@@ -1,9 +1,9 @@
 ---
 title:  WebSocket
 ---
-WebSocket用于创建持久长连接。
+WebSocket used to create a persistent long connection.
 
-**使用**
+**Usage**
 
 ```javascript
 const ws = new WebSocket("wss://xxxx");

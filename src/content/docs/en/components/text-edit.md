@@ -1,10 +1,10 @@
 ---
-title: 单行输入框 TextEdit
+title: TextEdit
 ---
 
-多行输入框用于输入多行文本内容
+TextEdit Component for entering multi-line text content
 
-**使用**
+**Usage**
 
 ```javascript
 import {TextEdit} from 'deft-react';
@@ -13,18 +13,18 @@ function App() {
 }
 ```
 
-**属性**
+**Properties**
 
-| 属性          | 说明   | 类型                   | 默认值    |
-|-------------|------|----------------------|--------|
-| text        | 文本   | string               | -      |
-| placeholder | 输入提示 | string               | -      |
-| disabled    | 是否禁用 | boolean              | false  |
+| Property  | Description               | Type                 | Default |
+|-------------|---------------------------|----------------------|---------|
+| text        | text content              | string               | -       |
+| placeholder | placeholder of Input      | string               | -       |
+| disabled    | whether Input is disabled | boolean              | false   |
 
 
-**事件**
+**Events**
 
-| 事件          | 说明     | 事件类型               |
-|-------------|--------|--------------------|
-| textchange  | 文本发生变化 |                    |
-| caretchange | 光标发生变化 |                    |
+| Event        | Description                          | Event Type |
+|-------------|--------------------------------------|------------|
+| textchange  | triggers when the Input value change | -          |
+| caretchange | the cursor changes                   | -          |

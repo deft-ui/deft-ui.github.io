@@ -1,17 +1,17 @@
 ---
-title: 容器 Container
+title: Container
 ---
 
-容器用于展示多个元素。
+Container component for displaying multiple elements.
 
-**使用**
+**Usage**
 
 ```javascript
 import {Container} from 'deft-react';
 function App() {
     return <Container>
-        <Button>确定</Button>
-        <Button>取消</Button>
+        <Button>Confirm</Button>
+        <Button>Cancel</Button>
     </Container>
 }
 ```

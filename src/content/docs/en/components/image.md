@@ -1,10 +1,10 @@
 ---
-title: 图片 Image
+title: Image
 ---
 
-图片组件用户显示指定图片，支持PNG,JPEG,SVG,BMP等格式。
+Image component used to display specified images, supporting PNG, JPEG, SVG, BMP, etc. formats.
 
-**使用**
+**Usage**
 
 ```javascript
 import {Image} from 'deft-react';
@@ -13,8 +13,8 @@ function App() {
 }
 ```
 
-**属性**
+**Properties**
 
-| 属性  | 说明                                 | 类型     | 默认值 |
-|-----|------------------------------------|--------|-----|
-| src | 图片地址，可以是本地文件路径，也可以使用内联图片(data url) | string | -   |
+| Property | Description                                                                              | Type   | Default |
+|------------|------------------------------------------------------------------------------------------|--------|---------|
+| src        | Image address, which can be a local file path or an internal connection image (data url) | string | -       |

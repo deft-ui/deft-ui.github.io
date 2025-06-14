@@ -1,5 +1,5 @@
 ---
-title: 视频 Video
+title: Video
 ---
 
-在Deft中播放视频，需要引入额外的组件`deft-video`,详情请参考：https://github.com/deft-ui/deft-video
+To Play video in Deft, an additional component `deft-video` needs to be introduced. For details, please refer to: https://github.com/deft-ui/deft-video

@@ -1,9 +1,9 @@
 ---
-title:  Worker 后台线程
+title:  Worker
 ---
-Worker用于创建后台线程。
+Worker used to create background threads.
 
-**使用**
+**Usage**
 
 ```javascript
 const worker = new Worker("worker-index.js");

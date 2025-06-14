@@ -1,21 +1,22 @@
 ---
-title:  Window 窗体
+title:  Window
 ---
-Window用于窗体创建、更新等操作。
 
-PC平台支持创建多个窗体，Mobile平台仅支持创建一个窗体。
+Window use for window creation, update, etc.
 
-**使用**
+PC platform supports creating multiple windows, while Mobile platforms only support creating one window.
+
+**Usage**
 
 ```javascript
 const window = new Window();
-// 设置标题
+// Set window title
 window.title = "My Deft App";
-// 监听事件
+// Bind window resize event
 window.bindResize((e) => {
     console.log("window resized", e);
 });
-// 修改窗体大小（仅PC平台生效）
+// update window size (only supports PC platform)
 window.resize({
     width: 600,
     height: 400

@@ -1,10 +1,10 @@
 ---
-title: 文字标签 Label
+title: Label
 ---
 
-文字标签用于显示单一格式的文本内容
+Text label for displaying text content in a single format
 
-**使用**
+**Usage**
 
 ```javascript
 import {Label} from 'deft-react';
@@ -13,8 +13,8 @@ function App() {
 }
 ```
 
-**属性**
+**Properties**
 
-| 属性       | 说明     | 类型                   | 默认值   |
-|----------|--------|----------------------|-------|
-| text     | 文本内容   | string               | -     |
+| Property | Description  | Type   | Default |
+|------------|--------------|--------|---------|
+| text       | Text content | string | -       |

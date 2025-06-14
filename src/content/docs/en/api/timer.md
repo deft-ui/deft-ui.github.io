@@ -1,12 +1,12 @@
 ---
-title: Timer 计时器
+title: Timer
 ---
 
-计时器用于在指定时间执行特定任务。
+Timer is used to execute specific tasks at a specified time.
 
-计时器包含`setTimeout`,`clearTimeout`,`setInterval`,`clearInterval`四个方法。
+Timer contains `setTimeout`, `clearTimeout`, `setInterval`, `clearInterval` four methods.
 
-**使用**
+**Usage**
 
 ```javascript
 setTimeout(() => {

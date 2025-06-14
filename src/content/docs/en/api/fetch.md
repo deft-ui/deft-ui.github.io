@@ -1,10 +1,10 @@
 ---
-title:  Fetch 网络请求
+title:  Fetch Http requests
 ---
 
-Fetch用于发起Http请求
+Fetch used to initiate Http requests.
 
-**使用**
+**Usage**
 ```javascript
 const rsp = await fetch("https://deft-ui.github.io");
 const result = await rsp.json();

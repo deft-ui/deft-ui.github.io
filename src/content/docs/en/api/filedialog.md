@@ -1,9 +1,9 @@
 ---
-title:  FileDialog 文件对话框
+title:  FileDialog
 ---
-`fileDialog`全局变量用于打开、保存等选择文件操作。
+`fileDialog` is a global variable used to open, save, etc. file operations.
 
-**使用**
+**Usage**
 
 ```javascript
 const files = await fileDialog.show({

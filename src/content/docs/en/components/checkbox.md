@@ -1,10 +1,10 @@
 ---
-title: 复选框 Checkbox
+title: Checkbox
 ---
 
-复选框用于多项选择
+Checkbox Component for multi-selection
 
-**使用**
+**Usage**
 
 ```javascript
 import {Checkbox} from 'deft-react';
@@ -25,17 +25,17 @@ function App() {
 }
 ```
 
-**属性**
+**Properties**
 
-| 属性       | 说明   | 类型      | 默认值   |
-|----------|------|---------|-------|
-| label    | 标签   | string  | -     |
-| checked  | 是否勾选 | boolean | -     |
-| disabled | 是否禁用 | boolean | false |
+| Property | Description      | Type    | Default |
+|------------|------------------|---------|---------|
+| label      | Option text      | string  | -       |
+| checked    | Whether selected | boolean | -       |
+| disabled   | Whether disabled | boolean | false   |
 
 
-**事件**
+**Events**
 
-| 事件      | 说明       | 事件类型               |
-|---------|----------|--------------------|
-| change  | 勾选状态发生变化 |                    |
+| Event   | Description             | Event Type |
+|--------|-------------------------|------------|
+| change | Selection state changed | -          |

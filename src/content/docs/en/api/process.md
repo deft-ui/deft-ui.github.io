@@ -1,27 +1,27 @@
 ---
-title:  Process 进程
+title:  Process
 ---
-process用于控制进程、获取环境信息等。
+Process used to control process, get environment information, etc.
 
-**退出当前进程**
+**Exit current process**
 
 ```javascript
 process.exit(0);
 ```
 
-**获取命令行参数**
+**Get command line arguments**
 
 ```javascript
 const argv = process.argv;
 ```
 
-**判断是否为移动平台**
+**Determine whether it is a mobile platform**
 
 ```javascript
 const isMobile = process.isMobilePlatform;
 ```
 
-**捕获未处理的promise rejection**
+**Catch unhandled promise rejection**
 
 ```javascript
 process.setPromiseRejectionTracker((e) => {

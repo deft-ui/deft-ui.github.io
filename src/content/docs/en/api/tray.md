@@ -1,19 +1,19 @@
 ---
-title:  SystemTray 任务栏图标
+title:  SystemTray
 ---
-SystemTray用于创建任务栏右下角图标。
+SystemTray used to create icons in the taskbar.
 
-支持Linux/Windows/MacOS平台。
+Supports Linux/Windows/MacOS platforms.
 
 ```javascript
 const tray = new SystemTray();
 tray.title = "My Deft App";
 tray.icon = "path/to/icon.png";
-// 绑定左键点击事件
+// Bind click event
 tray.bindActivate(() => {
     console.log("clicked");
 });
-// 设置菜单
+// Set menus
 tray.setMenus([
     {
         id: "show",

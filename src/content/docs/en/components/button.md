@@ -1,21 +1,21 @@
 ---
-title: 按钮 Button
+title: Button
 ---
 
-按钮表示一个可点击的元素。
+Button represents an element that can be clicked.
 
-**使用**
+**Usage**
 
 ```javascript
 import {Button} from 'deft-react';
 function App() {
-    return <Button>确定</Button>
+    return <Button>Confirm</Button>
 }
 ```
 
-**属性**
+**Properties**
 
-| 属性         | 说明    | 类型        | 默认值    |
-|------------|-------|-----------|--------|
-| disabled   | 是否禁用  | boolean   | false  |
+| Property | Description        | Type    | Default |
+|------------|--------------------|---------|---------|
+| disabled   | disable the button | boolean | false   |
 

@@ -2,9 +2,9 @@
 title: <length>
 ---
 
-`<length>`表示距离值，有数量和单位表示，如`10px`。
+`<length>` represents a distance value, consisting of a quantity and a unit, such as `10px`.
 
-`<length>`支持以下单位：
+`<length>` supports the following units:
 
 - px
 - cm
@@ -16,4 +16,4 @@ title: <length>
 - vh
 - vw
 
-和Web不同，在Deft中，`rem`对应的根元素为`body`。
+And unlike in Web, in Deft, `rem` corresponds to the root element `body`.

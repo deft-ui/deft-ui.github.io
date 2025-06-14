@@ -1,10 +1,10 @@
 ---
-title: 创建第一个工程
+title: Create First Project
 ---
 
-## 创建工程
+## Create Project
 
-安装Rust和NodeJS环境后，使用下面任意一条命令，即可创建一个Deft工程。
+After installing the Rust and NodeJS environments, then use any of the following commands to create a Deft project.
 
 **Npm**
 ```bash
@@ -19,16 +19,16 @@ pnpm create deft@latest
 yarn create deft
 ```
 
-## 启动工程
+## Start Project
 
 ```bash
 npm run dev
 ```
 
-执行上面命令后，按`r`启动本地预览，按`a`启动Android预览（需连接Android手机，且已打开USB调试或无线调试）
+Running the above command will start a local preview, press `r` to start the local preview, press `a` to start the Android preview (requires a connected Android phone and enables USB debugging or wireless debugging).
 
-_注意：预览构建过程会自动连接Github下载Skia二进制库，请保持网络畅通。_
+_Note: The preview build process will automatically connect to Github to download the Skia binary library, please keep the network connected._
 
-## 热加载
+## Hot Reload
 
-使用上面命令创建的工程支持前端（JavaScript）热加载，可实时预览前端修改。后端（Rust）修改需重启App(在`npm run dev`命令下按`a`或`r`键重新启动App).
+Use the above command to create an engine that supports hot reloading of the front-end (JavaScript), which can preview the front-end modifications in real time. Back-end (Rust) modifications need to restart the App (press `a` or `r` to restart the App in the `npm run dev` command).

@@ -1,17 +1,17 @@
 ---
 title:  Sqlite
 ---
-Sqlite用于本地储存/查询结构化数据。
+Sqlite used to store/query structured data locally.
 
-**使用**
+**Usage**
 
 ```javascript
-// 打开/创建数据库文件
+// open/create database file
 const conn = await Sqlite.open("/path/to/dbfile");
-// 创建数据表
+// create table
 await conn.execute('CREATE TABLE IF NOT EXISTS "user" ("id" INTEGER, "name" TEXT)', []);
-// 插入数据
+// insert data
 await conn.execute("insert into user(id, name) values(?,?)", [1, "Tom"]);
-// 查询数据
+// query data
 const rows = await conn.query(`select * from user`);
 ```

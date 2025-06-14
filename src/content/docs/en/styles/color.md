@@ -1,8 +1,8 @@
 ---
-title: 颜色
+title: Color
 ---
 
-`color`表述颜色值，支持以下语法：
+`color` express color values, supports the following syntaxes:
 
 ```css
 

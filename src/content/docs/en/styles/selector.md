@@ -1,10 +1,10 @@
 ---
-title: 选择器
+title: Selector
 ---
 
-Deft支持类选择器、属性选择器、伪类选择器、伪元素选择器和组合选择器。
+Deft supports class selectors, attribute selectors, pseudo-class selectors, pseudo-element selectors, and combinators.
 
-### 类选择器
+### Class Selectors
 
 
 ```css
@@ -13,7 +13,7 @@ Deft支持类选择器、属性选择器、伪类选择器、伪元素选择器�
 }
 ```
 
-### 属性选择器
+### Attribute Selectors
 
 ```css
 [name="my-name"] {
@@ -21,7 +21,7 @@ Deft支持类选择器、属性选择器、伪类选择器、伪元素选择器�
 }
 ```
 
-### 伪类选择器
+### Pseudo-class Selectors
 
 ```css
 button:hover {
@@ -29,7 +29,7 @@ button:hover {
 }
 ```
 
-### 伪元素选择器
+### Pseudo-element Selectors
 
 ```css
 /* 设置滚动条样式 */
@@ -42,7 +42,7 @@ scroll::scrollbar-thumb {
 }
 ```
 
-### 组合选择器
+### Combinators
 
 ```css
 .title .name {

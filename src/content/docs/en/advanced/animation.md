@@ -1,44 +1,46 @@
 ---
-title: 动画
+title: Animation
 ---
 
-## 简介
+## Introduction
 
 Deft supports animation, similar to CSS animations.
 
-## 定义动画
+## Define Animation
 
-与Web中的@keyframes不同，在Deft中，需要通过`animation_cteate`定义动画，当前仅支持`transform`属性。
+Unlike the @keyframes in Web, in Deft, you need to define the animation by `animation_create`, currently only the `transform` property is supported.
 
-**示例**
+**Example**
 
 ```javascript
-// 创建一个旋转动画，动画名称为my-rotate
+// Create a rotate animation, the animation name is my-rotate
 animation_create("my-rotate", {
-    // 开始帧
+    // Start frame
     "0": {
         transform: 'rotate(0deg)'
     },
-    // 结束帧
+    // end frame
     "1": {
         transform: 'rotate(360deg)'
     }
 });
 ```
 
-_注意：动画名称应该全局唯一_
+_Note: The animation name should be unique_
 
 ## 应用动画
+## Apply Animation
 
-和Web CSS动画类似，Deft通过css应用动画，支持以下CSS属性：
+Like Web CSS animations, Deft applies animations through css, supporting the following CSS properties:
 
-**animation-name** 动画名称，由`animation_create`函数定义
+**animation-name** Animation name, defined by `animation_create` function
 
-**animation-duration** 动画时间，单位毫秒
+**animation-duration** Animation duration, in milliseconds
 
-**animation-iteration-count** 动画循环次数，默认为1
+**animation-iteration-count** Animation loop count, default is 1
 
-**示例**
+
+**Example**
 
 ```jsx
 <Button style={{

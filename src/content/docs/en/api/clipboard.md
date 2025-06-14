@@ -1,7 +1,7 @@
 ---
-title:  Clipboard 剪贴板
+title:  Clipboard
 ---
-Clipboard用于写入/读取剪贴板内容
+Clipboard used to write/read clipboard content.
 
 **使用**
 ```javascript

@@ -1,12 +1,12 @@
 ---
-title: 概述
+title: Overview
 ---
 
-Deft支持内联和CSS选择器设置元素的样式。
+Deft supports setting element styles using inline and CSS selectors.
 
-## 导入CSS样式表
+## Import CSS stylesheets
 
-**原生方式**
+**Native way**
 ```javascript
 const css = `
 .btn {
@@ -18,9 +18,10 @@ navigator.stylesheet.append(css);
 
 **Webpack**
 
-通过`deft-style-loader`可以实现css的导入和热加载，使用方法类似于`style-loader`。
+Using `deft-style-loader` can implement the import and hot loading of css, similar to `style-loader`.
 
-配置示例：
+
+Configuration example:
 
 ```
 module.exports = {
@@ -37,9 +38,9 @@ module.exports = {
 };
 ```
 
-## 内联样式
+## Inline styles
 
-Deft也可以通过CSS内联的方式设置元素的样式，默认采用flex布局，属性名使用小驼峰规则命名。比如设置居中布局：
+Deft also supports setting element styles using inline CSS, which uses flex layout by default. The property names use camel case. For example, to set a centered layout:
 
 ```jsx
 <Container
@@ -52,15 +53,15 @@ Deft也可以通过CSS内联的方式设置元素的样式，默认采用flex布
 </Container>
 ```
 
-## 继承
+## Inheritance
 
-样式支持继承，比如某个元素设置了`color`属性，其子元素在不设置`color`属性的情况下，将继承父元素的`color`计算值。
+Styles support inheritance, for example, if a certain element sets the `color` property, the child element will inherit the `color` computed value if it does not set the `color` property.
 
-## 盒子模型
+## Box model
 
-Deft的盒子模型采用的是Web CSS的`border-box`模型，通过margin定义元素的外边距，padding定义元素的内边距，border定义元素边框，border-radius定义圆角边框，宽高包含内边距和边框。
+The box model of Deft is based on the `border-box` model of Web CSS. Margin defines the margin of the element, padding defines the padding of the element, border defines the border of the element, and border-radius defines the rounded border. The width and height include padding and border.
 
-**使用示例**
+**Example**
 ```jsx
 <Container style={{
     width: 100,

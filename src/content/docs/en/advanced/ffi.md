@@ -1,12 +1,12 @@
 ---
-title: 跨语言调用
+title: Cross-Language Call
 ---
 
-## JavaScript调用Rust
+## JavaScript Call Rust
 
-1. 声明Rust函数
+1. Declare a Rust function
 
-   同步函数
+   Sync function
    ```rust
    #[deft_macros::js_func]
    pub fn hello(message: String) -> String {
@@ -14,7 +14,7 @@ title: 跨语言调用
        "Hi, I am Rust".to_string()
    }
    ```
-   异步函数
+   Async function
    ```rust
    #[deft_macros::js_func]
    pub async fn hello_async(message: String) -> String {
@@ -22,7 +22,7 @@ title: 跨语言调用
        "Hi, I am Rust".to_string()
    }
    ```
-2. 向JavaScript引擎注册Rust函数
+2. Register Rust functions to JavaScript engine
    ```rust
    impl IApp for YourApp {
       fn init_js_engine(&mut self, js_engine: &mut JsEngine) {
@@ -34,31 +34,31 @@ title: 跨语言调用
    ```
 3. JavaScript调用
    ```javascript
-   // 调用同步函数
+   // Call sync function
    const value = hello("Hello, I am JavaScript");
    console.log('value from rust', value);
    
-   // 调用异步函数
+   // Call async function
    const value = await hello_async("Hello, I am JavaScript");
    console.log('value from rust', value);
    ```
 
-## Rust调用JavaScript
+## Rust Call JavaScript
 
-**Rust全局执行JavaScript代码**
+**Rust global execute JavaScript code**
 
 ```rust
 let mut js_engine = JsEngine::get();
 js_engine.eval_module("console.log(111)", "test.js");
 ```
 
-**Rust回调JavaScript函数**
-JavaScript调用Rust的时候，可以把JavaScript函数作为参数传递给Rust, 此时，Rust便可以使用`call_as_function`回调JavaScript.
+**Rust call JavaScript function**
+JavaScript call Rust, and pass a JavaScript function as a parameter to Rust, at this time, Rust can use `call_as_function` to call the JavaScript function.
 ```rust
 #[deft_macros::js_func]
 pub fn my_rust_fn(callback: JsValue) {
-    // callback为JavaScript传递过来的一个function对象
-    // 执行JavaScript回调
+    // callback is a function object passed from JavaScript
+    // execute JavaScript callback
     callback.call_as_function(vec![JsValue::Bool(true)]);   
 }
 ```

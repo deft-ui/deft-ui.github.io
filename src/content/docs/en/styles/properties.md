@@ -1,12 +1,12 @@
 ---
-title: 属性
+title: Properties
 ---
 
-Deft只支持部分CSS属性和属性值，以下为支持的属性和值类型。
+Deft only supports a subset of CSS properties and property values. The following is the list of supported properties and value types.
 
-### 文字
+### 
 
-| 属性                         | 属性类型                                                                                                                      |
+| Property                         | Property Type                                                                                                                      |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------|
 | color                      | [\<color\>](color)                                                                                                        |
 | font-size                  | [\<length\>](length)                                                                                                      |
@@ -16,15 +16,15 @@ Deft只支持部分CSS属性和属性值，以下为支持的属性和值类型�
 | line-height                | [\<length\>](length) \| \<percent\> \| \<number\>                                                                         |
 
 
-### 背景
+### Background
 
-| 属性                         | 属性类型                                                                                                                      |
+| Property                         | Property Type                                                                                                                      |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------|
 | background-color           | [\<color\>](color)                                                                                                        |
 
-### 边框
+### Border
 
-| 属性                         | 属性类型                                     |
+| Property                         | Property Type                                     |
 |----------------------------|------------------------------------------|
 | border-top-width           | [\<length\>](length) \| \<percent\>      |
 | border-right-width         | [\<length\>](length) \| \<percent\>      |
@@ -43,8 +43,8 @@ Deft只支持部分CSS属性和属性值，以下为支持的属性和值类型�
 | border-bottom              | [\<length\>](length) [\<color\>](color)  |
 | border-left                | [\<length\>](length) [\<color\>](color)  |
 | border                     | [\<length\>](length) [\<color\>](color)  |
-### 布局
-| 属性                         | 属性类型                                                                                                                      |
+### Layout
+| Property                         | Property Type                                                                                                                      |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------|
 | display                    | none\| flex                                                                                                               |
 | position                   | static \| relative \| absolute                                                                                            |
@@ -66,9 +66,9 @@ Deft只支持部分CSS属性和属性值，以下为支持的属性和值类型�
 | bottom                     | [\<length\>](length) \| \<percent\>                                                                                       |
 | left                       | [\<length\>](length) \| \<percent\>                                                                                       |
 
-### 尺寸
+### Size
 
-| 属性                         | 属性类型                                                                                                                      |
+| Property                         | Property Type                                                                                                                      |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------|
 | width                      | [\<length\>](length) \| \<percent\>                                                                                       |
 | height                     | [\<length\>](length) \| \<percent\>                                                                                       |
@@ -77,9 +77,9 @@ Deft只支持部分CSS属性和属性值，以下为支持的属性和值类型�
 | min-width                  | [\<length\>](length) \| \<percent\>                                                                                       |
 | min-height                 | [\<length\>](length) \| \<percent\>                                                                                       |
 
-### 边距
+### Margin & Padding
 
-| 属性               | 属性类型                                     |
+| Property               | Property Type                                     |
 |------------------|------------------------------------------|
 | margin-top       | [\<length\>](length) \| \<percent\>      |
 | margin-right     | [\<length\>](length) \| \<percent\>      |
@@ -93,15 +93,15 @@ Deft只支持部分CSS属性和属性值，以下为支持的属性和值类型�
 | padding          | [\<length\>](length) \| \<percent\>      |
 
 
-### 变换
+### Transform
 
-| 属性                         | 属性类型                       |
+| Property                         | Property Type                       |
 |----------------------------|----------------------------|
 | transform                  | [\<transform\>](transform) |
 
-### 动画
+### Animation
 
-| 属性                         | 属性类型                                                                                                                      |
+| Property                         | Property Type                                                                                                                      |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------|
 | animation-name             | \<string\>                                                                                                                |
 | animation-duration         | number                                                                                                                    |

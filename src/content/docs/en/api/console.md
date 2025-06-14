@@ -1,9 +1,9 @@
 ---
-title:  Console 控制台
+title:  Console
 ---
-Console用于输出提示，日志等。支持trace, debug, log, info, warn, error等函数。
+Console used to output tips, logs, etc. Supports trace, debug, log, info, warn, error, etc. functions.
 
-**使用**
+**Usage**
 ```javascript
 console.log("Hello");
 console.warn("dangerous！！");

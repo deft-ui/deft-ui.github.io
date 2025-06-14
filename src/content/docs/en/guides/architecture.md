@@ -1,59 +1,58 @@
 ---
-title: 架构
+title: Architecture
 ---
 
-# 简介
+# Introduction
 
-Deft是一个通用的UI引擎，允许使用Rust和JavaScript构建跨平台应用。它使用统一的渲染引擎(skia)和JavaScript引擎(quickjs)，确保在所有平台都拥有一致的表现。
 Deft is a cross-platform UI engine that allows you to build applications using Rust and JavaScript. It uses a unified rendering engine (skia) and JavaScript engine (quickjs) to ensure consistent performance on all platforms.
 
-Deft提供常用的基础组件，同时允许创建自绘组件，这提供了极大的灵活性。基础组件和自绘组件使用Rust编写，以提供更好的性能。
+Deft provides a wide range of basic components, and allows you to create custom components, which provides great flexibility. Basic components and custom components are written in Rust to provide better performance.
 
-Deft提供便捷高效的跨语言调用（Rust和JavaScript），可以高效地调用系统接口。
+Deft provides a convenient and efficient cross-language call (Rust and JavaScript), which can efficiently call system interfaces.
 
-# Deft不是什么
+# What is not Deft
 
-* 不是WebView。Deft不提供完整Web环境，即使它提供很多跟Web一致的API。
-* 不是一个大而全的UI框架。Deft更多的是提供基础能力，同时提供易用的扩展机制，以保持轻量和灵活。
-* 不是高性能JavaScript引擎。Deft使用QuickJS解析执行JavaScript，性能并不是QuickJS的优势，性能问题应该使用Rust解决。
+* Is not a WebView. Deft does not provide a complete Web environment, even though it provides many Web-like APIs.
+* Is not a full UI framework. Deft provides basic capabilities and provides extensible mechanisms to keep it light and flexible.
+* Is not a high-performance JavaScript engine. Deft uses QuickJS to parse and execute JavaScript, performance is not the advantage of QuickJS, performance issues should be solved using Rust.
 
-# 主要组件
+# Main Components
 
 ## deft [Rust]
 
-Rust层使用的主要依赖库，提供应用初始化、启动、运行时、基础组件等能力。
+Rust layer uses the main dependency library, providing application initialization, startup, runtime, and basic components.
 
 ## deft-build [Rust]
 
-Rust层使用的构建脚本依赖，提供开发和构建相关能力。
+Rust layer uses the build script dependency, providing development and build related capabilities.
 
 ## deft-macros [Rust]
 
-Rust使用的宏工具包，提供方便的跨语言调用能力。
+Rust uses the macro tool package, providing convenient cross-language calling capabilities.
 
 ## deft-sys [JS]
 
-JS层类型定义库，它不是必须的，当你希望IDE提供类型提示的时候，才需要使用它。
+JS layer type definition library, it is not required, only when you want to provide type hints in the IDE.
 
 ## deft-react [JS]
 
-JS层React支持库，它不是必须的，当你希望使用React开发应用时，才需要使用它。
+JS layer React support library, it is not required, only when you want to use React to develop applications.
 
-# 外部组件
+# External Components
 
 ## deft-skia-safe
 
-提供2D图形渲染相关能力，从[rust-skia](https://github.com/rust-skia/rust-skia)项目fork出来的，以更好适配Deft
+Provides 2D graphics rendering capabilities. Forked from the [rust-skia](https://github.com/rust-skia/rust-skia) project to better adapt to Deft.
 
 ## deft-quick-js
 
-提供JS解析、执行相关能力，从[quick-js](https://github.com/theduke/quickjs-rs)项目fork出来的，以更好适配Deft
+Provides JS parsing and execution capabilities. Forked from the [quick-js](https://github.com/theduke/quickjs-rs) project to better adapt to Deft.
 
 ## deft-winit
 
-提供窗口创建、管理相关能力，从[winit](https://github.com/rust-windowing/winit)项目fork出来的，以更好适配Deft
+Provides window creation and management capabilities. Forked from the [winit](https://github.com/rust-windowing/winit) project to better adapt to Deft.
 
 ## deft-yoga
 
-提供布局计算相关能力，从[yoga-rs](https://github.com/bschwind/yoga-rs)项目fork出来的，以更好适配Deft
+Provides layout calculation capabilities. Forked from the [yoga-rs](https://github.com/bschwind/yoga-rs) project to better adapt to Deft.
 

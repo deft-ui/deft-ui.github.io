@@ -1,18 +1,19 @@
 ---
-title: 渲染器
+title: Renderers
 ---
 
-### 简介
+### Introduction
 
-Deft内建了以下3种渲染器。
+Deft comes with the following 3 renderers.
 
-| 名称         | 说明          | 支持平台                         |
+| Name         | Description          | Support Platforms                         |
 |------------|-------------|------------------------------|
 | SoftBuffer | CPU渲染       | Windows/MacOS/Linux          | 
 | GL         | GPU渲染       | Windows/MacOS/Linux/Android  | 
 | SoftGL     | CPU渲染，GPU呈现 | Windows/MacOS/Linux/Android  |
 
 通常，`GL`渲染器拥有更好的性能，但是会占用更多的内存，而`SoftGL`适合不支持`SoftBuffer`但是又想使用CPU渲染的场景。
+U 
 
 默认情况下，Deft会根据系统支持情况，按照表里的顺序，自动匹配到一个可用的渲染器。如果你希望更改默认的匹配顺序，可以通过以下方法设置。
 

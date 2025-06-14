@@ -1,32 +1,31 @@
 ---
-title: '可选特性'
+title: 'Optional Features'
 ---
 
-为了控制应用二进制包体积，Deft将部分功能模块以可选特性(feature)的方式提供，目前支持以下可选特性：
+To control the size of the application binary package, Deft provides some features as optional features. Currently, the following optional features are supported:
 
-| 特性        | 默认开启 | 功能            |
+| Feature        | Enbaled by Default | Functionality            |
 |-----------|------|---------------|
-| gl        | 是    | GPU渲染，移动端必须开启 |
-| http      | 是    | Http网络请求      |
-| websocket | 是    | WebSocket请求   |
-| tray      | 是    | 系统状态栏图标       |
-| audio     | 否    | 音频播放，暂不支持鸿蒙   |
-| clipboard | 否    | 剪贴板           |
-| dialog    | 否    | 对话框，仅支持PC端    |
-| sqlite    | 否    | sqlite数据库读写   |
+| gl        | Yes    | GPU rendering (must be enbaled for mobile devices) |
+| http      | Yes    | HTTP network requests      |
+| websocket | Yes    | WebSocket requests   |
+| tray      | Yes    | System status bar icon       |
+| audio     | No    | Audio playback (not yet supported on HarmonyOS)   |
+| clipboard | No    | Clipboard           |
+| dialog    | No    | Dialog boxes (PC-only support)    |
+| sqlite    | No    | SQLite database read/write   |
 
-## 配置可选特性
+## Configure Optional Features
 
-可选特性通过修改`Cargo.toml`配置，该文件保存在项目根目录下。
+Optional features are configured in the `Cargo.toml` file, which is located in the project root directory.
 
-如果需要关闭默认特性，则需要把`default-features`设置为false，然后把`features`设置为你想要启用的特性。
+If you want to disable the default features, you need to set `default-features` to false and set `features` to the features you want to enable.
 
-比如，如果你只想启用`http`,`websocket`特性，则需要将deft的依赖配置更改为如下：
+For example, if you only want to enable the `http` and `websocket` features, you need to modify the deft dependency to the following:
 
 ```toml
 [dependencies]
 deft = { version = "0.7.1", default-features = false, features = ["http", "websocket"] }
 ```
 
-更多feature用法，可参考[rust官方文档](https://doc.rust-lang.org/cargo/reference/features.html)。
-
+For more feature usage, please refer to the [rust official documentation](https://doc.rust-lang.org/cargo/reference/features.html).

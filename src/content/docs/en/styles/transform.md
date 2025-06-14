@@ -2,13 +2,13 @@
 title: <transform>
 ---
 
-`<transform>` 允许你旋转、缩放、倾斜或平移给定元素，目前支持以下函数。
+`<tarnsform>` allows you to rotate, scale, skew, or translate a given element, currently supports the following functions.
 
 - scale(dx, dy)
 - translate(dx, dy)
 - rotate(angle)
 
-支持组合多个函数，比如：
+Support combining multiple functions, such as:
 
 ```css
 .ani {
