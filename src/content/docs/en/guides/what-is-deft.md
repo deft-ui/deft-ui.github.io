@@ -24,11 +24,12 @@ Deft is an open-source cross-platform UI framework that supports writing high-pe
 
 ## Supported Platforms
 
-| Platfrom | Version       | Support |
-|----------|---------------|---------|
-| Windows  | 10+           | ✅      |
-| Linux    | X11 & Wayland | ✅      |
-| MacOS    | -             | ✅      |
-| Android  | -             | ✅      |
-| iOS      | -             | ❔      |
-| Web      | -             | ❌      |
+| Platform  | Version       | Support       |
+|-----------|---------------|---------------|
+| Windows   | 10+           | ✅             |
+| Linux     | X11 & Wayland | ✅             |
+| MacOS     | 10.12+        | ✅             |
+| HarmonyOS | 5+            | ✅experimental |
+| Android   | 6+            | ✅experimental |
+| iOS       | -             | ✅experimental |
+| Web       | -             | ❌             |
