@@ -49,4 +49,8 @@ loadDeftApp().then((app) => {
     window.addEventListener("resize", () => {
         resizeCanvasToDisplaySize(canvas);
     });
+}).catch((e) => {
+    console.error(e);
+    loadingTip.style.color = "red";
+    loadingTip.textContent = "Failed to load wasm: " + e.message;
 });
